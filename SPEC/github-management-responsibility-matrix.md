@@ -1,7 +1,7 @@
 # GitHub Management Responsibility Matrix - ClaudeBuild v2
 
 ## Overview
-This document defines the complete GitHub repository management responsibilities across all ClaudeBuild v2 agents, ensuring proper coordination of issues, branches, commits, PRs, and repository maintenance.
+This document defines the complete GitHub repository management responsibilities across all ClaudeBuild v2 agents, implementing 2025 best practices for enterprise-grade development workflows from local inception to production closure, ensuring proper coordination of issues, branches, commits, PRs, and repository maintenance.
 
 ## 🔧 Core GitHub & Repository Management Responsibilities
 
@@ -13,16 +13,17 @@ This document defines the complete GitHub repository management responsibilities
 - ❌ Does not directly interact with GitHub
 
 ### 🤖 Orchestrator Agent ✅ (PRIMARY RESPONSIBLE)
-**GitHub Role**: Repository Creation & Sync Management
-- ✅ **Creates the GitHub repository** (if new)
-- ✅ **Initializes Git** (git init) and sets up remote origin
-- ✅ **Connects local project to GitHub**
-- ✅ **Keeps local + GitHub sync integrity**
-- ✅ **Creates the initial issue** (MAIN ISSUE) and labels it
-- ✅ **Triggers branch creation** using git worktree for Builder Agents
-- ✅ **Pushes initial commits** and architecture templates
-- ✅ **Delegates follow-up steps** to other agents
-- ✅ **Global coordination** of all GitHub operations
+**GitHub Role**: Repository Creation & Sync Management (Enhanced 2025 Standards)
+- ✅ **Creates GitHub repository with complete structure** (templates, workflows, protection rules)
+- ✅ **Initializes Git with best practices** (semantic commits, branch naming conventions)
+- ✅ **Connects local project to GitHub** with proper authentication and security
+- ✅ **Maintains local + GitHub sync integrity** with automated validation
+- ✅ **Creates initial issue with templates** and proper labeling system
+- ✅ **Manages git worktree isolation** for conflict-free parallel development
+- ✅ **Implements branch protection rules** (2+ reviewers, status checks, security)
+- ✅ **Configures CI/CD pipelines** with quality gates and automation
+- ✅ **Sets up release management** with semantic versioning and changelog automation
+- ✅ **Global coordination** of all GitHub operations with enterprise standards
 
 ### 📘 Planner Agent
 **GitHub Role**: Issue Management
