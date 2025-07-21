@@ -7,6 +7,7 @@ const workflowCommand = require('./workflow');
 const dashboardCommand = require('./dashboard');
 const configCommand = require('./config');
 const sessionCommand = require('./session');
+const slashCommand = require('./slash');
 
 function registerAll(program) {
   // Init command
@@ -81,6 +82,9 @@ function registerAll(program) {
 
   // Session command
   program.addCommand(sessionCommand);
+
+  // Slash command
+  program.addCommand(slashCommand);
 }
 
 module.exports = { registerAll };

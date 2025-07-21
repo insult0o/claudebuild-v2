@@ -338,6 +338,56 @@ server.resource('claudebuild://architecture', {
   return { content };
 });
 
+server.resource('claudebuild://github-management', {
+  name: 'GitHub Management Architecture',
+  description: 'Complete GitHub management and synchronization architecture for multi-agent workflows',
+  mimeType: 'text/markdown'
+}, async () => {
+  const githubPath = path.join(__dirname, 'docs', 'GITHUB_MANAGEMENT_ARCHITECTURE.md');
+  const content = await readFile(githubPath, 'utf8');
+  return { content };
+});
+
+server.resource('claudebuild://conversations', {
+  name: 'Development Conversations',
+  description: 'Complete conversation history between user, ChatGPT, and Claude',
+  mimeType: 'text/markdown'
+}, async () => {
+  const conversationPath = path.join(__dirname, 'CONVERSATION.md');
+  const content = await readFile(conversationPath, 'utf8');
+  return { content };
+});
+
+server.resource('claudebuild://planning-conversation', {
+  name: 'Planning Conversation',
+  description: 'Initial ClaudeBuild planning conversation',
+  mimeType: 'text/markdown'
+}, async () => {
+  const planningPath = path.join(__dirname, 'CLAUDEBUILD_PLANNING_CONVERSATION.md');
+  const content = await readFile(planningPath, 'utf8');
+  return { content };
+});
+
+server.resource('claudebuild://full-conversation', {
+  name: 'Full V2 Conversation',
+  description: 'Complete ClaudeBuild v2 development conversation',
+  mimeType: 'text/markdown'
+}, async () => {
+  const fullPath = path.join(__dirname, 'CLAUDEBUILD_V2_FULL_CONVERSATION.md');
+  const content = await readFile(fullPath, 'utf8');
+  return { content };
+});
+
+server.resource('claudebuild://conversation-updates', {
+  name: 'Conversation Updates',
+  description: 'Recent conversation updates and changes',
+  mimeType: 'text/markdown'
+}, async () => {
+  const updatePath = path.join(__dirname, 'CONVERSATION_UPDATE.md');
+  const content = await readFile(updatePath, 'utf8');
+  return { content };
+});
+
 // Helper function to run ClaudeBuild commands
 async function runClaudeBuildCommand(args) {
   return new Promise((resolve, reject) => {

@@ -1,19 +1,24 @@
 const { spawn } = require('child_process');
 const path = require('path');
+const EventEmitter = require('events');
 const Logger = require('../../../cli/utils/logger');
+const KeepAliveManager = require('./keep-alive');
 
 /**
  * MCP Client for ClaudeBuild agents
  * Provides access to MCP server tools
  */
-class MCPClient {
+class MCPClient extends EventEmitter {
   constructor(config = {}) {
+    super();
     this.serverPath = config.serverPath || path.join(__dirname, '../../../../mcp-server/index.js');
     this.transport = config.transport || 'stdio';
     this.process = null;
     this.connected = false;
     this.messageId = 0;
     this.pendingRequests = new Map();
+    this.keepAlive = null;
+    this.enableKeepAlive = config.enableKeepAlive !== false;
   }
 
   /**
@@ -56,6 +61,12 @@ class MCPClient {
 
       this.connected = true;
       Logger.info('Connected to MCP server');
+      
+      // Start keep-alive if enabled
+      if (this.enableKeepAlive) {
+        this.keepAlive = new KeepAliveManager(this);
+        this.keepAlive.start();
+      }
       
     } catch (error) {
       Logger.error('Failed to connect to MCP server:', error.message);
@@ -136,9 +147,30 @@ class MCPClient {
   }
 
   /**
+   * Check if connected
+   */
+  isConnected() {
+    return this.connected && this.process && !this.process.killed;
+  }
+
+  /**
+   * Reconnect to MCP server
+   */
+  async reconnect() {
+    await this.disconnect();
+    await this.connect();
+  }
+
+  /**
    * Disconnect from MCP server
    */
   async disconnect() {
+    // Stop keep-alive
+    if (this.keepAlive) {
+      this.keepAlive.stop();
+      this.keepAlive = null;
+    }
+
     if (this.process) {
       this.process.kill();
       this.process = null;

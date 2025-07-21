@@ -232,6 +232,21 @@ sessionCommand
     }
   });
 
+// Terminal UI mode
+sessionCommand
+  .command('tui')
+  .description('Launch Terminal UI mode')
+  .action(async () => {
+    try {
+      const TUI = require('../tui/main');
+      const tui = new TUI();
+      await tui.run();
+    } catch (error) {
+      Logger.error(`Failed to launch TUI: ${error.message}`);
+      process.exit(1);
+    }
+  });
+
 // Interactive session manager
 sessionCommand
   .command('interactive')

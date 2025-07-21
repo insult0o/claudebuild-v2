@@ -244,6 +244,15 @@ Tools may return errors:
 
 Agents should gracefully handle tool unavailability and continue their work when possible.
 
+## Available Documentation
+
+- `ARCHITECTURE.md` - System architecture overview
+- `IMPLEMENTATION_DETAILS.md` - Technical implementation details
+- `INTEGRATION_GUIDE.md` - Integration instructions
+- `TOOL_CALL_POLICY.md` - Tool usage policies
+- `TOOL_DISCOVERY_CACHE.md` - Tool discovery system
+- `GITHUB_MANAGEMENT_ARCHITECTURE.md` - Complete GitHub management and synchronization architecture
+
 ## Future Tools
 
 - **database_query**: Query project databases

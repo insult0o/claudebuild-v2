@@ -11,6 +11,8 @@ Every agent MUST document tool discoveries in `TOOL_DISCOVERY_CACHE.md`:
 - PDF extractions → Templates, patterns
 - Code validation → Common issues, fixes
 - API discoveries → Rate limits, best practices
+- GitHub workflows → Repository patterns, best practices
+- Agent coordination → Collaboration templates, protocols
 
 ### 2. Cache-First Approach
 Before using any tool:

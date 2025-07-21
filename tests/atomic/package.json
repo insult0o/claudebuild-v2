@@ -1,0 +1,65 @@
+{
+  "name": "claudebuild-v2-atomic-tests",
+  "version": "2.0.0",
+  "description": "Atomic level test suite for ClaudeBuild v2 - comprehensive testing from the ground up",
+  "main": "index.test.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "test:verbose": "CLAUDEBUILD_TEST_VERBOSE=true jest --verbose",
+    "test:core": "jest --testNamePattern='Core Utilities'",
+    "test:agents": "jest --testNamePattern='Agent Subsystems'",
+    "test:commands": "jest --testNamePattern='Command Systems'",
+    "test:gui": "jest --testNamePattern='GUI Components'",
+    "test:integration": "jest --testNamePattern='Integration Scenarios'",
+    "test:voice": "jest --testNamePattern='Voice Control'",
+    "test:performance": "jest --testNamePattern='Performance'",
+    "test:ci": "jest --ci --coverage --watchAll=false",
+    "report": "jest --coverage && open coverage/lcov-report/index.html",
+    "clean": "rm -rf coverage reports node_modules",
+    "validate": "node validate-tests.js"
+  },
+  "jest": {
+    "preset": "./jest.config.js"
+  },
+  "keywords": [
+    "claudebuild",
+    "testing",
+    "atomic",
+    "jest",
+    "automation",
+    "ai-agents",
+    "workflow",
+    "cli"
+  ],
+  "author": "TORE Matrix Labs",
+  "license": "MIT",
+  "devDependencies": {
+    "@jest/globals": "^29.7.0",
+    "jest": "^29.7.0",
+    "jest-html-reporters": "^3.1.5",
+    "jest-junit": "^16.0.0",
+    "babel-jest": "^29.7.0",
+    "@babel/core": "^7.23.0",
+    "@babel/preset-env": "^7.23.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tore-matrix-labs/claudebuild-v2.git",
+    "directory": "tests/atomic"
+  },
+  "bugs": {
+    "url": "https://github.com/tore-matrix-labs/claudebuild-v2/issues"
+  },
+  "homepage": "https://github.com/tore-matrix-labs/claudebuild-v2#readme",
+  "testEnvironment": "node",
+  "collectCoverageFrom": [
+    "../../src/**/*.js",
+    "!../../src/**/*.test.js",
+    "!../../src/**/node_modules/**"
+  ]
+}

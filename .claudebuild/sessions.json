@@ -1,0 +1,18 @@
+{
+  "test-1753060643421": {
+    "id": "test-1753060643421",
+    "branch": "session/test-1753060643421",
+    "worktree": "/home/insulto/claudebuild/.claudebuild/worktrees/test-1753060643421",
+    "baseBranch": "main",
+    "agent": "test",
+    "task": {
+      "description": "Test worktree functionality"
+    },
+    "status": "completed",
+    "created": "2025-07-21T01:17:23.443Z",
+    "checkpoints": [],
+    "paused": "2025-07-21T01:17:23.496Z",
+    "resumed": "2025-07-21T01:17:23.497Z",
+    "completed": "2025-07-21T01:17:23.524Z"
+  }
+}
