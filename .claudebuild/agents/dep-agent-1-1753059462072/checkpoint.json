@@ -1,0 +1,1 @@
+{"task":{"id":"dep-1","type":"builder","agent":"dep-agent-1","description":"First task","input":{"project":"deps","files":[{"path":"step1.txt","content":"Step 1"}]},"metadata":{"priority":"high"},"status":"ready","retries":0},"timestamp":1753059464120}

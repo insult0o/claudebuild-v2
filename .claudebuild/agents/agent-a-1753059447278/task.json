@@ -1,0 +1,20 @@
+{
+  "id": "task-a",
+  "type": "builder",
+  "agent": "agent-a",
+  "description": "First task",
+  "input": {
+    "project": "multi",
+    "files": [
+      {
+        "path": "file-a.txt",
+        "content": "From agent A"
+      }
+    ]
+  },
+  "metadata": {
+    "priority": "high"
+  },
+  "status": "ready",
+  "retries": 0
+}

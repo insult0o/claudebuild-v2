@@ -1,0 +1,5 @@
+agents:
+  parallelLimit: 6
+test:
+  value: test123
+  mykey: myvalue

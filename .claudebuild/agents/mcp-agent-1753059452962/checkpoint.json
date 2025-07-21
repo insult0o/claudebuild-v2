@@ -1,0 +1,1 @@
+{"task":{"id":"mcp-test","type":"builder-mcp","agent":"mcp-agent","description":"Use MCP tools","input":{"task":"Search for Node.js tutorials","requirements":["Use web search"]},"metadata":{"priority":"high"},"status":"ready","retries":0},"timestamp":1753059454579}

@@ -1,0 +1,168 @@
+{
+  "workflow": {
+    "status": "running",
+    "definition": {
+      "name": "e2e-complete",
+      "description": "Generated from tasks.json",
+      "tasks": {
+        "research": {
+          "id": "research",
+          "type": "builder-mcp",
+          "agent": "researcher",
+          "description": "Research JavaScript testing frameworks",
+          "input": {
+            "task": "Find information about Jest, Mocha, and Vitest",
+            "requirements": [
+              "Use web search to find comparisons",
+              "Create a summary of findings"
+            ]
+          },
+          "metadata": {
+            "priority": "high"
+          }
+        },
+        "analyze": {
+          "id": "analyze",
+          "type": "builder",
+          "agent": "analyzer",
+          "description": "Analyze research results",
+          "input": {
+            "project": "e2e-complete",
+            "files": [
+              {
+                "path": "analysis/summary.md",
+                "content": "# Testing Framework Analysis\n\nBased on research findings..."
+              }
+            ]
+          },
+          "metadata": {
+            "priority": "high"
+          }
+        },
+        "implement-jest": {
+          "id": "implement-jest",
+          "type": "builder",
+          "agent": "jest-impl",
+          "description": "Create Jest example",
+          "input": {
+            "project": "e2e-complete",
+            "files": [
+              {
+                "path": "examples/jest/sum.js",
+                "content": "function sum(a, b) {\n  return a + b;\n}\nmodule.exports = sum;"
+              },
+              {
+                "path": "examples/jest/sum.test.js",
+                "content": "const sum = require('./sum');\n\ntest('adds 1 + 2 to equal 3', () => {\n  expect(sum(1, 2)).toBe(3);\n});"
+              }
+            ]
+          },
+          "metadata": {
+            "priority": "medium"
+          }
+        },
+        "implement-mocha": {
+          "id": "implement-mocha",
+          "type": "builder",
+          "agent": "mocha-impl",
+          "description": "Create Mocha example",
+          "input": {
+            "project": "e2e-complete",
+            "files": [
+              {
+                "path": "examples/mocha/multiply.js",
+                "content": "function multiply(a, b) {\n  return a * b;\n}\nmodule.exports = multiply;"
+              },
+              {
+                "path": "examples/mocha/multiply.test.js",
+                "content": "const assert = require('assert');\nconst multiply = require('./multiply');\n\ndescribe('Multiply', () => {\n  it('should multiply 3 * 4 to equal 12', () => {\n    assert.equal(multiply(3, 4), 12);\n  });\n});"
+              }
+            ]
+          },
+          "metadata": {
+            "priority": "medium"
+          }
+        },
+        "documentation": {
+          "id": "documentation",
+          "type": "builder",
+          "agent": "doc-writer",
+          "description": "Create final documentation",
+          "input": {
+            "project": "e2e-complete",
+            "files": [
+              {
+                "path": "README.md",
+                "content": "# JavaScript Testing Frameworks Comparison\n\n## Overview\nThis project demonstrates different JavaScript testing frameworks.\n\n## Examples\n- Jest: See examples/jest/\n- Mocha: See examples/mocha/\n\n## Summary\nBased on our research and implementation..."
+              }
+            ]
+          },
+          "metadata": {
+            "priority": "low"
+          }
+        }
+      },
+      "dependencies": {
+        "analyze": [
+          "research"
+        ],
+        "implement-jest": [
+          "analyze"
+        ],
+        "implement-mocha": [
+          "analyze"
+        ],
+        "documentation": [
+          "implement-jest",
+          "implement-mocha"
+        ]
+      },
+      "settings": {
+        "parallelLimit": 3,
+        "autoQA": false,
+        "autoMerge": false
+      }
+    },
+    "context": {
+      "source": "tasks.json",
+      "tasksFile": "e2e-complete.json",
+      "project": "e2e-complete"
+    },
+    "startedAt": "2025-07-21T01:05:36.497Z",
+    "lastUpdated": "2025-07-21T01:05:36.497Z"
+  },
+  "tasks": {
+    "research": {
+      "status": "completed",
+      "agentId": "researcher-1753059936498",
+      "startedAt": "2025-07-21T01:05:36.505Z",
+      "lastUpdated": "2025-07-21T01:05:38.207Z",
+      "result": {
+        "status": "completed",
+        "implementation": {
+          "filesCreated": [
+            "README-MCP.md"
+          ],
+          "researchUsed": true
+        },
+        "research": {
+          "toolsUsed": [
+            "web_search",
+            "github_search"
+          ],
+          "resourcesFound": {
+            "bestPractices": 3,
+            "githubExamples": 5
+          }
+        }
+      },
+      "completedAt": "2025-07-21T01:05:38.207Z"
+    },
+    "analyze": {
+      "status": "running",
+      "agentId": "analyzer-1753059938210",
+      "startedAt": "2025-07-21T01:05:38.210Z",
+      "lastUpdated": "2025-07-21T01:05:38.210Z"
+    }
+  }
+}

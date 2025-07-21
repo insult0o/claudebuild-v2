@@ -1,0 +1,1 @@
+{"task":{"id":"task-001","type":"builder","agent":"builder-01","description":"Setup project foundation","input":{"story":"story-001.md","context":{"architecture":"architecture.md","prd":"PRD.md"}},"metadata":{"priority":"high","estimated_time":"2h"},"status":"ready","retries":0},"timestamp":1752980326188}

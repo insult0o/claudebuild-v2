@@ -1,0 +1,73 @@
+{
+  "workflow": {
+    "status": "completed",
+    "definition": {
+      "name": "test-mcp-tools",
+      "description": "Generated from tasks.json",
+      "tasks": {
+        "test-mcp-001": {
+          "id": "test-mcp-001",
+          "type": "builder-mcp",
+          "agent": "mcp-test-agent",
+          "description": "Test MCP tools by researching React best practices",
+          "input": {
+            "framework": "react",
+            "task": "Research and document current React best practices"
+          },
+          "metadata": {
+            "priority": "high",
+            "estimated_time": "5m"
+          }
+        }
+      },
+      "dependencies": {},
+      "settings": {
+        "parallelLimit": 1,
+        "autoQA": false,
+        "autoMerge": false
+      }
+    },
+    "context": {
+      "source": "tasks.json",
+      "tasksFile": "test-mcp-task.json",
+      "project": "test-mcp-tools"
+    },
+    "startedAt": "2025-07-20T03:29:51.370Z",
+    "lastUpdated": "2025-07-20T03:29:51.415Z",
+    "results": {
+      "completed": [
+        "test-mcp-001"
+      ],
+      "failed": [],
+      "skipped": [],
+      "outputs": {
+        "test-mcp-001": {
+          "status": "completed",
+          "implementation": "template-based",
+          "research": {
+            "toolsUsed": [],
+            "resourcesFound": {}
+          }
+        }
+      }
+    },
+    "completedAt": "2025-07-20T03:29:51.415Z"
+  },
+  "tasks": {
+    "test-mcp-001": {
+      "status": "completed",
+      "agentId": "mcp-test-agent-1752982191371",
+      "startedAt": "2025-07-20T03:29:51.377Z",
+      "lastUpdated": "2025-07-20T03:29:51.415Z",
+      "result": {
+        "status": "completed",
+        "implementation": "template-based",
+        "research": {
+          "toolsUsed": [],
+          "resourcesFound": {}
+        }
+      },
+      "completedAt": "2025-07-20T03:29:51.415Z"
+    }
+  }
+}

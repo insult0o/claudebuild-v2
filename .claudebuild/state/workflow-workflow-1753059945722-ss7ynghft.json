@@ -1,0 +1,266 @@
+{
+  "workflow": {
+    "status": "running",
+    "definition": {
+      "name": "parallel-stress",
+      "description": "Generated from tasks.json",
+      "tasks": {
+        "parallel-0": {
+          "id": "parallel-0",
+          "type": "builder",
+          "agent": "parallel-agent-0",
+          "description": "Parallel task 0",
+          "input": {
+            "project": "parallel",
+            "files": [
+              {
+                "path": "output-0.txt",
+                "content": "Output from parallel task 0"
+              }
+            ]
+          },
+          "metadata": {
+            "priority": "medium"
+          }
+        },
+        "parallel-1": {
+          "id": "parallel-1",
+          "type": "builder",
+          "agent": "parallel-agent-1",
+          "description": "Parallel task 1",
+          "input": {
+            "project": "parallel",
+            "files": [
+              {
+                "path": "output-1.txt",
+                "content": "Output from parallel task 1"
+              }
+            ]
+          },
+          "metadata": {
+            "priority": "medium"
+          }
+        },
+        "parallel-2": {
+          "id": "parallel-2",
+          "type": "builder",
+          "agent": "parallel-agent-2",
+          "description": "Parallel task 2",
+          "input": {
+            "project": "parallel",
+            "files": [
+              {
+                "path": "output-2.txt",
+                "content": "Output from parallel task 2"
+              }
+            ]
+          },
+          "metadata": {
+            "priority": "medium"
+          }
+        },
+        "parallel-3": {
+          "id": "parallel-3",
+          "type": "builder",
+          "agent": "parallel-agent-3",
+          "description": "Parallel task 3",
+          "input": {
+            "project": "parallel",
+            "files": [
+              {
+                "path": "output-3.txt",
+                "content": "Output from parallel task 3"
+              }
+            ]
+          },
+          "metadata": {
+            "priority": "medium"
+          }
+        },
+        "parallel-4": {
+          "id": "parallel-4",
+          "type": "builder",
+          "agent": "parallel-agent-4",
+          "description": "Parallel task 4",
+          "input": {
+            "project": "parallel",
+            "files": [
+              {
+                "path": "output-4.txt",
+                "content": "Output from parallel task 4"
+              }
+            ]
+          },
+          "metadata": {
+            "priority": "medium"
+          }
+        },
+        "parallel-5": {
+          "id": "parallel-5",
+          "type": "builder",
+          "agent": "parallel-agent-5",
+          "description": "Parallel task 5",
+          "input": {
+            "project": "parallel",
+            "files": [
+              {
+                "path": "output-5.txt",
+                "content": "Output from parallel task 5"
+              }
+            ]
+          },
+          "metadata": {
+            "priority": "medium"
+          }
+        },
+        "parallel-6": {
+          "id": "parallel-6",
+          "type": "builder",
+          "agent": "parallel-agent-6",
+          "description": "Parallel task 6",
+          "input": {
+            "project": "parallel",
+            "files": [
+              {
+                "path": "output-6.txt",
+                "content": "Output from parallel task 6"
+              }
+            ]
+          },
+          "metadata": {
+            "priority": "medium"
+          }
+        },
+        "parallel-7": {
+          "id": "parallel-7",
+          "type": "builder",
+          "agent": "parallel-agent-7",
+          "description": "Parallel task 7",
+          "input": {
+            "project": "parallel",
+            "files": [
+              {
+                "path": "output-7.txt",
+                "content": "Output from parallel task 7"
+              }
+            ]
+          },
+          "metadata": {
+            "priority": "medium"
+          }
+        },
+        "parallel-8": {
+          "id": "parallel-8",
+          "type": "builder",
+          "agent": "parallel-agent-8",
+          "description": "Parallel task 8",
+          "input": {
+            "project": "parallel",
+            "files": [
+              {
+                "path": "output-8.txt",
+                "content": "Output from parallel task 8"
+              }
+            ]
+          },
+          "metadata": {
+            "priority": "medium"
+          }
+        },
+        "parallel-9": {
+          "id": "parallel-9",
+          "type": "builder",
+          "agent": "parallel-agent-9",
+          "description": "Parallel task 9",
+          "input": {
+            "project": "parallel",
+            "files": [
+              {
+                "path": "output-9.txt",
+                "content": "Output from parallel task 9"
+              }
+            ]
+          },
+          "metadata": {
+            "priority": "medium"
+          }
+        }
+      },
+      "dependencies": {},
+      "settings": {
+        "parallelLimit": 5,
+        "autoQA": false,
+        "autoMerge": false
+      }
+    },
+    "context": {
+      "source": "tasks.json",
+      "tasksFile": "parallel-stress.json",
+      "project": "parallel-stress"
+    },
+    "startedAt": "2025-07-21T01:05:45.722Z",
+    "lastUpdated": "2025-07-21T01:05:45.722Z"
+  },
+  "tasks": {
+    "parallel-0": {
+      "status": "running",
+      "agentId": "parallel-agent-0-1753059945723",
+      "startedAt": "2025-07-21T01:05:45.730Z",
+      "lastUpdated": "2025-07-21T01:05:45.730Z"
+    },
+    "parallel-1": {
+      "status": "running",
+      "agentId": "parallel-agent-1-1753059945723",
+      "startedAt": "2025-07-21T01:05:45.730Z",
+      "lastUpdated": "2025-07-21T01:05:45.730Z"
+    },
+    "parallel-2": {
+      "status": "running",
+      "agentId": "parallel-agent-2-1753059945723",
+      "startedAt": "2025-07-21T01:05:45.730Z",
+      "lastUpdated": "2025-07-21T01:05:45.730Z"
+    },
+    "parallel-3": {
+      "status": "running",
+      "agentId": "parallel-agent-3-1753059945723",
+      "startedAt": "2025-07-21T01:05:45.730Z",
+      "lastUpdated": "2025-07-21T01:05:45.730Z"
+    },
+    "parallel-4": {
+      "status": "running",
+      "agentId": "parallel-agent-4-1753059945723",
+      "startedAt": "2025-07-21T01:05:45.730Z",
+      "lastUpdated": "2025-07-21T01:05:45.730Z"
+    },
+    "parallel-5": {
+      "status": "running",
+      "agentId": "parallel-agent-5-1753059945723",
+      "startedAt": "2025-07-21T01:05:45.730Z",
+      "lastUpdated": "2025-07-21T01:05:45.730Z"
+    },
+    "parallel-6": {
+      "status": "running",
+      "agentId": "parallel-agent-6-1753059945723",
+      "startedAt": "2025-07-21T01:05:45.730Z",
+      "lastUpdated": "2025-07-21T01:05:45.730Z"
+    },
+    "parallel-7": {
+      "status": "running",
+      "agentId": "parallel-agent-7-1753059945723",
+      "startedAt": "2025-07-21T01:05:45.730Z",
+      "lastUpdated": "2025-07-21T01:05:45.730Z"
+    },
+    "parallel-8": {
+      "status": "running",
+      "agentId": "parallel-agent-8-1753059945723",
+      "startedAt": "2025-07-21T01:05:45.730Z",
+      "lastUpdated": "2025-07-21T01:05:45.730Z"
+    },
+    "parallel-9": {
+      "status": "running",
+      "agentId": "parallel-agent-9-1753059945723",
+      "startedAt": "2025-07-21T01:05:45.730Z",
+      "lastUpdated": "2025-07-21T01:05:45.730Z"
+    }
+  }
+}

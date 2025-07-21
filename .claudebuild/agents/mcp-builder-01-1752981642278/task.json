@@ -1,0 +1,19 @@
+{
+  "id": "mcp-001",
+  "type": "builder",
+  "agent": "mcp-builder-01",
+  "description": "Implement MCP client in agent runtime",
+  "input": {
+    "story": "mcp-integration-stories/story-001-mcp-client.md",
+    "context": {
+      "mcp_docs": "mcp-server/README.md",
+      "runtime": "src/core/agents/runtime/node.js"
+    }
+  },
+  "metadata": {
+    "priority": "high",
+    "estimated_time": "3h"
+  },
+  "status": "ready",
+  "retries": 0
+}

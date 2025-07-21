@@ -1,0 +1,19 @@
+{
+  "id": "mcp-002",
+  "type": "builder",
+  "agent": "mcp-builder-02",
+  "description": "Implement tool access policy system",
+  "input": {
+    "story": "mcp-integration-stories/story-002-tool-access.md",
+    "context": {
+      "config": "src/core/config/index.js",
+      "planning_doc": "mcp-server/CLAUDEBUILD_PLANNING_CONVERSATION.md"
+    }
+  },
+  "metadata": {
+    "priority": "high",
+    "estimated_time": "2h"
+  },
+  "status": "ready",
+  "retries": 0
+}

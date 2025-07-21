@@ -1,0 +1,20 @@
+{
+  "id": "success-task",
+  "type": "builder",
+  "agent": "success-agent",
+  "description": "Successful task",
+  "input": {
+    "project": "mixed",
+    "files": [
+      {
+        "path": "success.txt",
+        "content": "This will succeed"
+      }
+    ]
+  },
+  "metadata": {
+    "priority": "high"
+  },
+  "status": "ready",
+  "retries": 0
+}

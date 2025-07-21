@@ -1,0 +1,24 @@
+{
+  "id": "setup-001",
+  "type": "builder",
+  "agent": "setup-agent",
+  "description": "Create project structure",
+  "input": {
+    "project": "real-test",
+    "files": [
+      {
+        "path": "package.json",
+        "content": "{\n  \"name\": \"real-world-test\",\n  \"version\": \"1.0.0\",\n  \"main\": \"index.js\"\n}"
+      },
+      {
+        "path": "README.md",
+        "content": "# Real World Test\n\nA test project built with ClaudeBuild"
+      }
+    ]
+  },
+  "metadata": {
+    "priority": "high"
+  },
+  "status": "ready",
+  "retries": 0
+}

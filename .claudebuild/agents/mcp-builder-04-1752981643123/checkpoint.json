@@ -1,0 +1,1 @@
+{"task":{"id":"mcp-004","type":"builder","agent":"mcp-builder-04","description":"Implement tool usage logging","input":{"story":"mcp-integration-stories/story-004-logging.md","context":{"monitoring":"monitoring-dashboard/","logger":"src/cli/utils/logger.js"}},"metadata":{"priority":"medium","estimated_time":"2h"},"status":"ready","retries":0},"timestamp":1752981643837}

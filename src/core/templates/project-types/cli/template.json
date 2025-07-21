@@ -1,0 +1,53 @@
+{
+  "name": "CLI Tool",
+  "description": "A command-line interface application",
+  "directories": [
+    "src/commands",
+    "src/utils",
+    "tests",
+    "bin"
+  ],
+  "files": [
+    {
+      "path": "README.md",
+      "template": "README.md"
+    },
+    {
+      "path": ".gitignore",
+      "template": "gitignore"
+    },
+    {
+      "path": "package.json",
+      "template": "package.json"
+    },
+    {
+      "path": "bin/cli.js",
+      "template": "cli.js",
+      "mode": "0755"
+    },
+    {
+      "path": "src/index.js",
+      "template": "index.js"
+    },
+    {
+      "path": "src/commands/hello.js",
+      "template": "hello-command.js"
+    },
+    {
+      "path": "src/utils/logger.js",
+      "template": "logger.js"
+    }
+  ],
+  "postGenerate": [
+    {
+      "type": "npm",
+      "action": "install",
+      "message": "Installing dependencies..."
+    },
+    {
+      "type": "git",
+      "action": "init",
+      "message": "Initializing git repository..."
+    }
+  ]
+}

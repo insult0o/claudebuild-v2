@@ -1,0 +1,52 @@
+{
+  "workflow": {
+    "status": "running",
+    "definition": {
+      "name": "research-project",
+      "description": "Generated from tasks.json",
+      "tasks": {
+        "research-001": {
+          "id": "research-001",
+          "type": "builder-mcp",
+          "agent": "research-agent",
+          "description": "Research and implement a Node.js REST API with JWT authentication",
+          "input": {
+            "task": "Build a REST API with JWT authentication",
+            "requirements": [
+              "Use Express.js framework",
+              "Implement JWT token generation and validation",
+              "Create user registration and login endpoints",
+              "Add middleware for protected routes",
+              "Include proper error handling"
+            ]
+          },
+          "metadata": {
+            "priority": "high",
+            "estimated_time": "30m"
+          }
+        }
+      },
+      "dependencies": {},
+      "settings": {
+        "parallelLimit": 1,
+        "autoQA": false,
+        "autoMerge": false
+      }
+    },
+    "context": {
+      "source": "tasks.json",
+      "tasksFile": "research-task.json",
+      "project": "research-project"
+    },
+    "startedAt": "2025-07-21T00:18:07.524Z",
+    "lastUpdated": "2025-07-21T00:18:07.524Z"
+  },
+  "tasks": {
+    "research-001": {
+      "status": "running",
+      "agentId": "research-agent-1753057087524",
+      "startedAt": "2025-07-21T00:18:07.532Z",
+      "lastUpdated": "2025-07-21T00:18:07.532Z"
+    }
+  }
+}

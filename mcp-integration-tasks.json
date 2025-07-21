@@ -1,0 +1,86 @@
+{
+  "project": "claudebuild-mcp-integration",
+  "created": "2025-07-20T03:20:00.000Z",
+  "planning_artifacts": {
+    "issue": "MCP_INTEGRATION_ISSUE.md",
+    "prd": "mcp-server/CLAUDEBUILD_PLANNING_CONVERSATION.md",
+    "architecture": "mcp-server/ARCHITECTURE.md",
+    "stories": [
+      "mcp-integration-stories/story-001-mcp-client.md",
+      "mcp-integration-stories/story-002-tool-access.md",
+      "mcp-integration-stories/story-003-agent-tools.md",
+      "mcp-integration-stories/story-004-logging.md"
+    ]
+  },
+  "tasks": [
+    {
+      "id": "mcp-001",
+      "type": "builder",
+      "agent": "mcp-builder-01",
+      "description": "Implement MCP client in agent runtime",
+      "input": {
+        "story": "mcp-integration-stories/story-001-mcp-client.md",
+        "context": {
+          "mcp_docs": "mcp-server/README.md",
+          "runtime": "src/core/agents/runtime/node.js"
+        }
+      },
+      "dependencies": [],
+      "priority": "high",
+      "estimated_time": "3h"
+    },
+    {
+      "id": "mcp-002",
+      "type": "builder",
+      "agent": "mcp-builder-02",
+      "description": "Implement tool access policy system",
+      "input": {
+        "story": "mcp-integration-stories/story-002-tool-access.md",
+        "context": {
+          "config": "src/core/config/index.js",
+          "planning_doc": "mcp-server/CLAUDEBUILD_PLANNING_CONVERSATION.md"
+        }
+      },
+      "dependencies": ["mcp-001"],
+      "priority": "high",
+      "estimated_time": "2h"
+    },
+    {
+      "id": "mcp-003",
+      "type": "builder",
+      "agent": "mcp-builder-03",
+      "description": "Add MCP tools to agent context",
+      "input": {
+        "story": "mcp-integration-stories/story-003-agent-tools.md",
+        "context": {
+          "handlers": "src/core/agents/handlers/",
+          "runtime": "src/core/agents/runtime/node.js"
+        }
+      },
+      "dependencies": ["mcp-001", "mcp-002"],
+      "priority": "high",
+      "estimated_time": "2h"
+    },
+    {
+      "id": "mcp-004",
+      "type": "builder",
+      "agent": "mcp-builder-04",
+      "description": "Implement tool usage logging",
+      "input": {
+        "story": "mcp-integration-stories/story-004-logging.md",
+        "context": {
+          "monitoring": "monitoring-dashboard/",
+          "logger": "src/cli/utils/logger.js"
+        }
+      },
+      "dependencies": ["mcp-001"],
+      "priority": "medium",
+      "estimated_time": "2h"
+    }
+  ],
+  "workflow": {
+    "parallel_limit": 3,
+    "auto_qa": true,
+    "auto_merge": false
+  }
+}

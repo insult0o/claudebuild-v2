@@ -1,0 +1,203 @@
+{
+  "workflow": {
+    "status": "completed",
+    "definition": {
+      "name": "claudebuild",
+      "description": "Generated from tasks.json",
+      "tasks": {
+        "task-001": {
+          "id": "task-001",
+          "type": "builder",
+          "agent": "builder-01",
+          "description": "Setup project foundation",
+          "input": {
+            "story": "story-001.md",
+            "context": {
+              "architecture": "architecture.md",
+              "prd": "PRD.md"
+            }
+          },
+          "metadata": {
+            "priority": "high",
+            "estimated_time": "2h"
+          }
+        },
+        "task-002": {
+          "id": "task-002",
+          "type": "builder",
+          "agent": "builder-02",
+          "description": "Implement core API",
+          "input": {
+            "story": "story-002.md",
+            "context": {
+              "architecture": "architecture.md",
+              "prd": "PRD.md"
+            }
+          },
+          "metadata": {
+            "priority": "high",
+            "estimated_time": "4h"
+          }
+        },
+        "task-003": {
+          "id": "task-003",
+          "type": "builder",
+          "agent": "builder-03",
+          "description": "Create frontend components",
+          "input": {
+            "story": "story-003.md",
+            "context": {
+              "architecture": "architecture.md",
+              "prd": "PRD.md"
+            }
+          },
+          "metadata": {
+            "priority": "medium",
+            "estimated_time": "3h"
+          }
+        }
+      },
+      "dependencies": {
+        "task-002": [
+          "task-001"
+        ],
+        "task-003": [
+          "task-001"
+        ]
+      },
+      "settings": {
+        "parallelLimit": 4,
+        "autoQA": true,
+        "autoMerge": false
+      }
+    },
+    "context": {
+      "source": "tasks.json",
+      "tasksFile": "tasks.json",
+      "project": "claudebuild"
+    },
+    "startedAt": "2025-07-20T03:29:19.817Z",
+    "lastUpdated": "2025-07-20T03:29:20.601Z",
+    "results": {
+      "completed": [
+        "task-001",
+        "task-003",
+        "task-002"
+      ],
+      "failed": [],
+      "skipped": [],
+      "outputs": {
+        "task-001": {
+          "status": "completed",
+          "story": "story-001.md",
+          "implemented": true,
+          "message": "Story story-001.md implementation complete",
+          "storyDetails": {
+            "title": "Setup project foundation",
+            "description": "Initialize the project with the chosen tech stack and basic structure.",
+            "tasks": [
+              "Project initialized with package.json",
+              "Basic folder structure created",
+              "Development environment configured",
+              "Linting and formatting setup"
+            ]
+          },
+          "projectRoot": "/home/insulto/claudebuild/monitoring-dashboard"
+        },
+        "task-003": {
+          "status": "completed",
+          "story": "story-003.md",
+          "implemented": true,
+          "message": "Story story-003.md implementation complete",
+          "storyDetails": {
+            "title": "Create frontend components",
+            "description": "Build the UI components for the user interface.",
+            "tasks": [
+              "Component structure created",
+              "Styling implemented",
+              "Responsive design",
+              "Accessibility standards met"
+            ]
+          },
+          "projectRoot": "/home/insulto/claudebuild/monitoring-dashboard"
+        },
+        "task-002": "{\"status\":\"completed\",\"story\":\"story-002.md\",\"implemented\":true,\"message\":\"Story story-002.md implementation complete\",\"storyDetails\":{\"title\":\"Implement core API\",\"description\":\"Create the core API endpoints as defined in the PRD.\",\"tasks\":[\"API routes implemented\",\"Request validation added\",\"Error handling in place\",\"Basic tests written\"]},\"projectRoot\":\"/home/insulto/claudebuild/monitoring-dashboard\"}"
+      }
+    },
+    "completedAt": "2025-07-20T03:29:20.601Z"
+  },
+  "tasks": {
+    "task-001": {
+      "status": "completed",
+      "agentId": "builder-01-1752982159817",
+      "startedAt": "2025-07-20T03:29:19.825Z",
+      "lastUpdated": "2025-07-20T03:29:20.544Z",
+      "result": {
+        "status": "completed",
+        "story": "story-001.md",
+        "implemented": true,
+        "message": "Story story-001.md implementation complete",
+        "storyDetails": {
+          "title": "Setup project foundation",
+          "description": "Initialize the project with the chosen tech stack and basic structure.",
+          "tasks": [
+            "Project initialized with package.json",
+            "Basic folder structure created",
+            "Development environment configured",
+            "Linting and formatting setup"
+          ]
+        },
+        "projectRoot": "/home/insulto/claudebuild/monitoring-dashboard"
+      },
+      "completedAt": "2025-07-20T03:29:20.544Z"
+    },
+    "task-002": {
+      "status": "completed",
+      "agentId": "builder-02-1752982160546",
+      "startedAt": "2025-07-20T03:29:20.547Z",
+      "lastUpdated": "2025-07-20T03:29:20.600Z",
+      "result": {
+        "status": "completed",
+        "story": "story-002.md",
+        "implemented": true,
+        "message": "Story story-002.md implementation complete",
+        "storyDetails": {
+          "title": "Implement core API",
+          "description": "Create the core API endpoints as defined in the PRD.",
+          "tasks": [
+            "API routes implemented",
+            "Request validation added",
+            "Error handling in place",
+            "Basic tests written"
+          ]
+        },
+        "projectRoot": "/home/insulto/claudebuild/monitoring-dashboard"
+      },
+      "completedAt": "2025-07-20T03:29:20.600Z"
+    },
+    "task-003": {
+      "status": "completed",
+      "agentId": "builder-03-1752982160547",
+      "startedAt": "2025-07-20T03:29:20.547Z",
+      "lastUpdated": "2025-07-20T03:29:20.599Z",
+      "result": {
+        "status": "completed",
+        "story": "story-003.md",
+        "implemented": true,
+        "message": "Story story-003.md implementation complete",
+        "storyDetails": {
+          "title": "Create frontend components",
+          "description": "Build the UI components for the user interface.",
+          "tasks": [
+            "Component structure created",
+            "Styling implemented",
+            "Responsive design",
+            "Accessibility standards met"
+          ]
+        },
+        "projectRoot": "/home/insulto/claudebuild/monitoring-dashboard"
+      },
+      "completedAt": "2025-07-20T03:29:20.599Z"
+    }
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "workflow": {
+    "status": "completed",
+    "definition": {
+      "name": "claudebuild",
+      "description": "Generated from tasks.json",
+      "tasks": {
+        "task-001": {
+          "id": "task-001",
+          "type": "builder",
+          "agent": "builder-01",
+          "description": "Setup project foundation",
+          "input": {
+            "story": "story-001.md",
+            "context": {
+              "architecture": "architecture.md",
+              "prd": "PRD.md"
+            }
+          },
+          "metadata": {
+            "priority": "high",
+            "estimated_time": "2h"
+          }
+        },
+        "task-002": {
+          "id": "task-002",
+          "type": "builder",
+          "agent": "builder-02",
+          "description": "Implement core API",
+          "input": {
+            "story": "story-002.md",
+            "context": {
+              "architecture": "architecture.md",
+              "prd": "PRD.md"
+            }
+          },
+          "metadata": {
+            "priority": "high",
+            "estimated_time": "4h"
+          }
+        },
+        "task-003": {
+          "id": "task-003",
+          "type": "builder",
+          "agent": "builder-03",
+          "description": "Create frontend components",
+          "input": {
+            "story": "story-003.md",
+            "context": {
+              "architecture": "architecture.md",
+              "prd": "PRD.md"
+            }
+          },
+          "metadata": {
+            "priority": "medium",
+            "estimated_time": "3h"
+          }
+        }
+      },
+      "dependencies": {
+        "task-002": [
+          "task-001"
+        ],
+        "task-003": [
+          "task-001"
+        ]
+      },
+      "settings": {
+        "parallelLimit": 4,
+        "autoQA": true,
+        "autoMerge": false
+      }
+    },
+    "context": {
+      "source": "tasks.json",
+      "tasksFile": "tasks.json",
+      "project": "claudebuild"
+    },
+    "startedAt": "2025-07-20T03:02:20.610Z",
+    "lastUpdated": "2025-07-20T03:02:31.710Z",
+    "results": {
+      "completed": [
+        "task-001",
+        "task-002",
+        "task-003"
+      ],
+      "failed": [],
+      "skipped": [],
+      "outputs": {
+        "task-001": "{\"success\":true,\"message\":\"Task completed by builder-01 agent\",\"taskId\":\"task-001\",\"timestamp\":1752980546148}",
+        "task-002": "{\"success\":true,\"message\":\"Task completed by builder-02 agent\",\"taskId\":\"task-002\",\"timestamp\":1752980551706}",
+        "task-003": "{\"success\":true,\"message\":\"Task completed by builder-03 agent\",\"taskId\":\"task-003\",\"timestamp\":1752980551706}"
+      }
+    },
+    "completedAt": "2025-07-20T03:02:31.710Z"
+  },
+  "tasks": {
+    "task-001": {
+      "status": "completed",
+      "agentId": "builder-01-1752980540611",
+      "startedAt": "2025-07-20T03:02:20.611Z",
+      "lastUpdated": "2025-07-20T03:02:26.151Z",
+      "result": {
+        "success": true,
+        "message": "Task completed by builder-01 agent",
+        "taskId": "task-001",
+        "timestamp": 1752980546148
+      },
+      "completedAt": "2025-07-20T03:02:26.151Z"
+    },
+    "task-002": {
+      "status": "completed",
+      "agentId": "builder-02-1752980546157",
+      "startedAt": "2025-07-20T03:02:26.157Z",
+      "lastUpdated": "2025-07-20T03:02:31.708Z",
+      "result": {
+        "success": true,
+        "message": "Task completed by builder-02 agent",
+        "taskId": "task-002",
+        "timestamp": 1752980551706
+      },
+      "completedAt": "2025-07-20T03:02:31.708Z"
+    },
+    "task-003": {
+      "status": "completed",
+      "agentId": "builder-03-1752980546157",
+      "startedAt": "2025-07-20T03:02:26.158Z",
+      "lastUpdated": "2025-07-20T03:02:31.708Z",
+      "result": {
+        "success": true,
+        "message": "Task completed by builder-03 agent",
+        "taskId": "task-003",
+        "timestamp": 1752980551706
+      },
+      "completedAt": "2025-07-20T03:02:31.708Z"
+    }
+  }
+}

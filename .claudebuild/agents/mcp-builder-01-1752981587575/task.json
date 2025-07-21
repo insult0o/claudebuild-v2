@@ -1,0 +1,15 @@
+{
+  "id": "mcp-001",
+  "type": "builder",
+  "agent": "mcp-builder-01",
+  "description": "Implement MCP client in agent runtime",
+  "input": {
+    "context": {}
+  },
+  "metadata": {
+    "priority": "high",
+    "estimated_time": "3h"
+  },
+  "status": "ready",
+  "retries": 0
+}

@@ -1,0 +1,21 @@
+{
+  "id": "warning-task",
+  "type": "builder",
+  "agent": "warning-agent",
+  "description": "Task with warnings",
+  "input": {
+    "project": "mixed",
+    "files": [
+      {
+        "path": "warning.txt",
+        "content": "This may have warnings"
+      }
+    ],
+    "validateStrict": false
+  },
+  "metadata": {
+    "priority": "medium"
+  },
+  "status": "ready",
+  "retries": 0
+}

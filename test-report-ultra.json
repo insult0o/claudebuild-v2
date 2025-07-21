@@ -1,0 +1,339 @@
+{
+  "timestamp": "2025-07-21T01:05:50.357Z",
+  "duration": "32.17",
+  "results": {
+    "total": 17,
+    "passed": 14,
+    "failed": 3,
+    "errors": [
+      {
+        "test": "Fix Config Version",
+        "error": "Version update failed, got: 0.1.0",
+        "stack": "Error: Version update failed, got: 0.1.0\n    at /home/insulto/claudebuild/test-ultra-comprehensive.js:187:15\n    at async runTest (/home/insulto/claudebuild/test-ultra-comprehensive.js:44:20)\n    at async testConfigurationInDepth (/home/insulto/claudebuild/test-ultra-comprehensive.js:171:3)\n    at async runAllTests (/home/insulto/claudebuild/test-ultra-comprehensive.js:1128:5)",
+        "critical": false
+      },
+      {
+        "test": "Start MCP Server with Monitoring",
+        "error": "Command failed: ps aux | grep \"node.*mcp-server.*index.js\" | grep -v grep\n",
+        "stack": "Error: Command failed: ps aux | grep \"node.*mcp-server.*index.js\" | grep -v grep\n\n    at genericNodeError (node:internal/errors:984:15)\n    at wrappedFn (node:internal/errors:538:14)\n    at ChildProcess.exithandler (node:child_process:422:12)\n    at ChildProcess.emit (node:events:524:28)\n    at maybeClose (node:internal/child_process:1104:16)\n    at ChildProcess._handle.onexit (node:internal/child_process:304:5)",
+        "critical": false
+      },
+      {
+        "test": "Complete E2E with All Features",
+        "error": "Only 2/5 tasks completed",
+        "stack": "Error: Only 2/5 tasks completed\n    at /home/insulto/claudebuild/test-ultra-comprehensive.js:960:13\n    at async runTest (/home/insulto/claudebuild/test-ultra-comprehensive.js:44:20)\n    at async testFullIntegrationScenarios (/home/insulto/claudebuild/test-ultra-comprehensive.js:788:3)\n    at async runAllTests (/home/insulto/claudebuild/test-ultra-comprehensive.js:1133:5)",
+        "critical": true
+      }
+    ],
+    "details": {
+      "Config Version Sources": {
+        "status": "passed",
+        "duration": 83,
+        "result": {
+          "packageVersion": "1.0.0",
+          "cliVersion": "1.0.0",
+          "configVersion": "0.1.0",
+          "defaultVersion": "0.1.0"
+        },
+        "critical": false
+      },
+      "Fix Config Version": {
+        "status": "failed",
+        "duration": 1,
+        "error": "Version update failed, got: 0.1.0",
+        "critical": false
+      },
+      "Environment Variable Priority": {
+        "status": "passed",
+        "duration": 0,
+        "result": {
+          "envOverrideWorks": true
+        },
+        "critical": false
+      },
+      "Complete Agent Inventory": {
+        "status": "passed",
+        "duration": 9,
+        "result": {
+          "agents": {
+            "orchestrator": {
+              "type": "orchestrator",
+              "capabilities": [
+                "orchestration",
+                "planning",
+                "coordination"
+              ],
+              "handler": "unknown"
+            },
+            "planner": {
+              "type": "planner",
+              "capabilities": [
+                "planning",
+                "requirements",
+                "analysis",
+                "documentation"
+              ],
+              "handler": "unknown"
+            },
+            "architect": {
+              "type": "architect",
+              "capabilities": [
+                "architecture",
+                "design",
+                "technical-planning",
+                "documentation"
+              ],
+              "handler": "unknown"
+            },
+            "scrummaster": {
+              "type": "scrummaster",
+              "capabilities": [
+                "planning",
+                "story-creation",
+                "task-breakdown",
+                "estimation"
+              ],
+              "handler": "unknown"
+            },
+            "dev": {
+              "type": "dev",
+              "capabilities": [
+                "development",
+                "coding",
+                "implementation",
+                "refactoring",
+                "testing"
+              ],
+              "handler": "unknown"
+            },
+            "builder": {
+              "type": "builder",
+              "capabilities": [
+                "development",
+                "coding",
+                "implementation",
+                "testing"
+              ],
+              "handler": "unknown"
+            },
+            "qa": {
+              "type": "qa",
+              "capabilities": [
+                "testing",
+                "quality-assurance",
+                "validation",
+                "review"
+              ],
+              "handler": "unknown"
+            },
+            "manager": {
+              "type": "manager",
+              "capabilities": [
+                "management",
+                "integration",
+                "reporting",
+                "pr-creation"
+              ],
+              "handler": "unknown"
+            },
+            "generic": {
+              "type": "generic",
+              "capabilities": [
+                "general",
+                "task-execution"
+              ],
+              "handler": "unknown"
+            }
+          },
+          "handlerFiles": [
+            "architect.js",
+            "builder-mcp.js",
+            "builder-sim.js",
+            "builder.js",
+            "dev.js",
+            "planner.js",
+            "scrummaster.js"
+          ]
+        },
+        "critical": false
+      },
+      "Create Orchestrator Handler": {
+        "status": "passed",
+        "duration": 1,
+        "result": {
+          "created": true,
+          "registered": true
+        },
+        "critical": false
+      },
+      "Agent List Command Output": {
+        "status": "passed",
+        "duration": 438,
+        "result": {
+          "cliAgents": [
+            {
+              "id": "analyst",
+              "description": "Requirements Analysis"
+            },
+            {
+              "id": "pm",
+              "description": "Product Management"
+            },
+            {
+              "id": "architect",
+              "description": "System Architecture"
+            },
+            {
+              "id": "dev",
+              "description": "Development"
+            },
+            {
+              "id": "qa",
+              "description": "Quality Assurance"
+            },
+            {
+              "id": "devops",
+              "description": "DevOps & Deployment"
+            }
+          ]
+        },
+        "critical": false
+      },
+      "Clean MCP Environment": {
+        "status": "passed",
+        "duration": 1034,
+        "result": {
+          "cleaned": true
+        },
+        "critical": false
+      },
+      "Start MCP Server with Monitoring": {
+        "status": "failed",
+        "duration": 3038,
+        "error": "Command failed: ps aux | grep \"node.*mcp-server.*index.js\" | grep -v grep\n",
+        "critical": false
+      },
+      "MCP Server Stability": {
+        "status": "passed",
+        "duration": 3025,
+        "result": {
+          "connections": 5,
+          "successful": 5,
+          "failed": 0
+        },
+        "critical": false
+      },
+      "MCP Server Keep-Alive": {
+        "status": "passed",
+        "duration": 2,
+        "result": {
+          "keepAliveCreated": true
+        },
+        "critical": false
+      },
+      "Build with Clear Output": {
+        "status": "passed",
+        "duration": 2551,
+        "result": {
+          "taskStates": {
+            "task3-start": true,
+            "task1-start": true
+          },
+          "orderCorrect": false
+        },
+        "critical": false
+      },
+      "Build Progress Tracking": {
+        "status": "passed",
+        "duration": 2541,
+        "result": {
+          "hasProgressBar": true,
+          "hasPercentage": true,
+          "hasCompletion": true
+        },
+        "critical": false
+      },
+      "Graceful Error Handling": {
+        "status": "passed",
+        "duration": 2558,
+        "result": {
+          "errorCaught": false,
+          "hasErrorMessage": true,
+          "hasTaskId": true,
+          "cleanOutput": true
+        },
+        "critical": false
+      },
+      "Warning vs Error Distinction": {
+        "status": "passed",
+        "duration": 2543,
+        "result": {
+          "successes": 3,
+          "warnings": 20,
+          "errors": 2,
+          "buildSucceeded": false
+        },
+        "critical": false
+      },
+      "Complete E2E with All Features": {
+        "status": "failed",
+        "duration": 9212,
+        "error": "Only 2/5 tasks completed",
+        "critical": true
+      },
+      "Parallel Task Performance": {
+        "status": "passed",
+        "duration": 2576,
+        "result": {
+          "duration": 2575,
+          "tasksPerSecond": "3.88",
+          "maxConcurrent": 10
+        },
+        "critical": false
+      },
+      "Deep Dependency Chain": {
+        "status": "passed",
+        "duration": 2554,
+        "result": {
+          "executionOrder": [
+            0
+          ],
+          "orderCorrect": true
+        },
+        "critical": false
+      }
+    }
+  },
+  "components": {
+    "Configuration": [
+      "Config Version Sources",
+      "Fix Config Version",
+      "Environment Variable Priority"
+    ],
+    "Agent System": [
+      "Complete Agent Inventory",
+      "Create Orchestrator Handler",
+      "Agent List Command Output"
+    ],
+    "MCP Server": [
+      "Clean MCP Environment",
+      "Start MCP Server with Monitoring",
+      "MCP Server Stability"
+    ],
+    "Build System": [
+      "Build with Clear Output",
+      "Build Progress Tracking"
+    ],
+    "Error Handling": [
+      "Graceful Error Handling",
+      "Warning vs Error Distinction"
+    ],
+    "Integration": [
+      "Complete E2E with All Features"
+    ],
+    "Performance": [
+      "Parallel Task Performance",
+      "Deep Dependency Chain"
+    ]
+  }
+}

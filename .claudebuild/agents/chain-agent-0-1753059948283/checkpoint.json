@@ -1,0 +1,1 @@
+{"task":{"id":"chain-0","type":"builder","agent":"chain-agent-0","description":"Chain task 0","input":{"project":"chain","files":[{"path":"step-0.txt","content":"Step 0 completed"}]},"metadata":{"priority":"high"},"status":"ready","retries":0},"timestamp":1753059950326}

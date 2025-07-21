@@ -1,0 +1,72 @@
+{
+  "workflow": {
+    "status": "running",
+    "definition": {
+      "name": "test-deps",
+      "description": "Generated from tasks.json",
+      "tasks": {
+        "dep-1": {
+          "id": "dep-1",
+          "type": "builder",
+          "agent": "dep-agent-1",
+          "description": "First task",
+          "input": {
+            "project": "deps",
+            "files": [
+              {
+                "path": "step1.txt",
+                "content": "Step 1"
+              }
+            ]
+          },
+          "metadata": {
+            "priority": "high"
+          }
+        },
+        "dep-2": {
+          "id": "dep-2",
+          "type": "builder",
+          "agent": "dep-agent-2",
+          "description": "Depends on first",
+          "input": {
+            "project": "deps",
+            "files": [
+              {
+                "path": "step2.txt",
+                "content": "Step 2 (after step 1)"
+              }
+            ]
+          },
+          "metadata": {
+            "priority": "medium"
+          }
+        }
+      },
+      "dependencies": {
+        "dep-2": [
+          "dep-1"
+        ]
+      },
+      "settings": {
+        "parallelLimit": 2,
+        "autoQA": false,
+        "autoMerge": false
+      }
+    },
+    "context": {
+      "source": "tasks.json",
+      "tasksFile": "test-deps.json",
+      "project": "test-deps"
+    },
+    "startedAt": "2025-07-21T00:57:42.071Z",
+    "lastUpdated": "2025-07-21T00:57:42.071Z"
+  },
+  "tasks": {
+    "dep-1": {
+      "status": "running",
+      "agentId": "dep-agent-1-1753059462072",
+      "startedAt": "2025-07-21T00:57:42.079Z",
+      "lastUpdated": "2025-07-21T00:57:42.079Z"
+    }
+  }
+}

@@ -1,0 +1,48 @@
+# Enhancement: Integrate MCP Server Capabilities into Agent Runtime
+
+## Context
+Recent analysis of ClaudeBuild's monitoring dashboard build revealed that agents made ZERO use of MCP servers or web search capabilities. Investigation showed:
+
+1. Agents successfully built a complete monitoring dashboard
+2. But they used only hardcoded templates and embedded knowledge
+3. No GitHub searches, no web documentation lookups, no MCP server calls
+4. Agent runtime provides only basic file operations and logging
+
+## Problem Statement
+Current agents are limited to pre-programmed templates and cannot:
+- Search for code examples on GitHub
+- Look up documentation or best practices
+- Use MCP tools for enhanced capabilities
+- Adapt to new requirements dynamically
+
+## Requirements
+1. **MCP Tool Integration**
+   - Add MCP client capabilities to agent runtime
+   - Provide access to web_search, github_search, and other MCP tools
+   - Maintain agent isolation while enabling external access
+
+2. **User-Governed Tool Access**
+   - Implement the policy system designed in CLAUDEBUILD_PLANNING_CONVERSATION.md
+   - Allow users to control: ask|allow|deny for each tool
+   - Session-level permissions for efficiency
+
+3. **Security & Oversight**
+   - All external tool usage must be logged
+   - Human approval required for sensitive operations
+   - Clear audit trail of what agents searched/accessed
+
+4. **Backward Compatibility**
+   - Existing agents should continue working
+   - MCP tools should be opt-in per agent type
+
+## Success Criteria
+- Agents can search GitHub for code examples
+- Agents can look up documentation dynamically
+- Tool usage is controlled by user policy
+- All external access is logged and auditable
+- System remains secure with human oversight
+
+## References
+- See `mcp-server/CLAUDEBUILD_PLANNING_CONVERSATION.md` for detailed analysis
+- MCP server already exists in `/mcp-server` directory
+- Current agent context in `src/core/agents/runtime/node.js`

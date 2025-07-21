@@ -1,0 +1,50 @@
+{
+  "workflow": {
+    "status": "running",
+    "definition": {
+      "name": "progress-test",
+      "description": "Generated from tasks.json",
+      "tasks": {
+        "progress-task": {
+          "id": "progress-task",
+          "type": "builder",
+          "agent": "progress-agent",
+          "description": "Task with progress tracking",
+          "input": {
+            "project": "progress",
+            "files": [
+              {
+                "path": "progress.txt",
+                "content": "Progress tracking test"
+              }
+            ]
+          },
+          "metadata": {
+            "priority": "high"
+          }
+        }
+      },
+      "dependencies": {},
+      "settings": {
+        "parallelLimit": 1,
+        "autoQA": false,
+        "autoMerge": false
+      }
+    },
+    "context": {
+      "source": "tasks.json",
+      "tasksFile": "progress-test.json",
+      "project": "progress-test"
+    },
+    "startedAt": "2025-07-21T01:05:28.825Z",
+    "lastUpdated": "2025-07-21T01:05:28.825Z"
+  },
+  "tasks": {
+    "progress-task": {
+      "status": "running",
+      "agentId": "progress-agent-1753059928826",
+      "startedAt": "2025-07-21T01:05:28.833Z",
+      "lastUpdated": "2025-07-21T01:05:28.833Z"
+    }
+  }
+}

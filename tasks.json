@@ -1,0 +1,67 @@
+{
+  "project": "claudebuild",
+  "created": "2025-07-20T03:17:21.152Z",
+  "planning_artifacts": {
+    "issue": "MCP_INTEGRATION_ISSUE.md",
+    "prd": "PRD.md",
+    "architecture": "architecture.md",
+    "stories": [
+      "story-001.md",
+      "story-002.md",
+      "story-003.md"
+    ]
+  },
+  "tasks": [
+    {
+      "id": "task-001",
+      "type": "builder",
+      "agent": "builder-01",
+      "story": "story-001.md",
+      "description": "Setup project foundation",
+      "dependencies": [],
+      "priority": "high",
+      "estimated_time": "2h",
+      "context": {
+        "architecture": "architecture.md",
+        "prd": "PRD.md"
+      }
+    },
+    {
+      "id": "task-002",
+      "type": "builder",
+      "agent": "builder-02",
+      "story": "story-002.md",
+      "description": "Implement core API",
+      "dependencies": [
+        "task-001"
+      ],
+      "priority": "high",
+      "estimated_time": "4h",
+      "context": {
+        "architecture": "architecture.md",
+        "prd": "PRD.md"
+      }
+    },
+    {
+      "id": "task-003",
+      "type": "builder",
+      "agent": "builder-03",
+      "story": "story-003.md",
+      "description": "Create frontend components",
+      "dependencies": [
+        "task-001"
+      ],
+      "priority": "medium",
+      "estimated_time": "3h",
+      "context": {
+        "architecture": "architecture.md",
+        "prd": "PRD.md"
+      }
+    }
+  ],
+  "workflow": {
+    "parallel_limit": 4,
+    "auto_qa": true,
+    "auto_merge": false
+  }
+}

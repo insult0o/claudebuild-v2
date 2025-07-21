@@ -1,0 +1,1 @@
+{"task":{"id":"simple-001","type":"builder","agent":"simple-agent","description":"Create hello world file","input":{"project":"simple","files":[{"path":"hello.txt","content":"Hello World from ClaudeBuild!"}]},"metadata":{"priority":"high"},"status":"ready","retries":0},"timestamp":1753059260887}

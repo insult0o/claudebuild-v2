@@ -1,0 +1,1 @@
+{"task":{"id":"output-task-3","type":"builder","agent":"output-agent-3","description":"Third task runs parallel","input":{"project":"output-test","files":[{"path":"output3.txt","content":"Task 3 output (parallel)"}]},"metadata":{"priority":"medium"},"status":"ready","retries":0},"timestamp":1753059928359}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClaudeBuild Monitoring Dashboard</title>
+    <link rel="stylesheet" href="/styles/main.css">
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>ClaudeBuild Monitoring Dashboard</h1>
+            <div id="connection-status" class="status disconnected">
+                <span class="status-dot"></span>
+                <span class="status-text">Disconnected</span>
+            </div>
+        </header>
+        
+        <main>
+            <section id="summary" class="dashboard-section">
+                <h2>Summary</h2>
+                <div class="stats">
+                    <div class="stat-card">
+                        <h3>Active Agents</h3>
+                        <div class="stat-value" id="active-agents">0</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Running Workflows</h3>
+                        <div class="stat-value" id="running-workflows">0</div>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Tasks Completed</h3>
+                        <div class="stat-value" id="tasks-completed">0</div>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="agents" class="dashboard-section">
+                <h2>Agents</h2>
+                <div id="agents-list" class="agents-grid">
+                    <!-- Agent cards will be inserted here -->
+                </div>
+            </section>
+            
+            <section id="workflows" class="dashboard-section">
+                <h2>Active Workflows</h2>
+                <div id="workflows-list" class="workflows-list">
+                    <!-- Workflow items will be inserted here -->
+                </div>
+            </section>
+            
+            <section id="logs" class="dashboard-section">
+                <h2>Live Logs</h2>
+                <div id="logs-container" class="logs-container">
+                    <!-- Log entries will be inserted here -->
+                </div>
+            </section>
+        </main>
+    </div>
+    
+    <script src="/js/api-client.js"></script>
+    <script src="/js/websocket-client.js"></script>
+    <script src="/js/dashboard.js"></script>
+</body>
+</html>

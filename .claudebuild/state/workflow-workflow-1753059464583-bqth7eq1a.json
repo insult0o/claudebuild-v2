@@ -1,0 +1,125 @@
+{
+  "workflow": {
+    "status": "running",
+    "definition": {
+      "name": "e2e-final",
+      "description": "Generated from tasks.json",
+      "tasks": {
+        "research": {
+          "id": "research",
+          "type": "builder-mcp",
+          "agent": "researcher",
+          "description": "Research best practices",
+          "input": {
+            "task": "Find Node.js project structure best practices",
+            "requirements": [
+              "Use web search",
+              "Create summary"
+            ]
+          },
+          "metadata": {
+            "priority": "high"
+          }
+        },
+        "setup": {
+          "id": "setup",
+          "type": "builder",
+          "agent": "setup-agent",
+          "description": "Create project structure",
+          "input": {
+            "project": "e2e",
+            "files": [
+              {
+                "path": "package.json",
+                "content": "{\n  \"name\": \"e2e-final\",\n  \"version\": \"1.0.0\",\n  \"description\": \"End-to-end test project\"\n}"
+              },
+              {
+                "path": "README.md",
+                "content": "# E2E Final Test\n\nBuilt with ClaudeBuild"
+              }
+            ]
+          },
+          "metadata": {
+            "priority": "medium"
+          }
+        },
+        "implement": {
+          "id": "implement",
+          "type": "builder",
+          "agent": "implement-agent",
+          "description": "Create application",
+          "input": {
+            "project": "e2e",
+            "files": [
+              {
+                "path": "src/index.js",
+                "content": "console.log(\"E2E test complete!\");"
+              },
+              {
+                "path": "src/utils.js",
+                "content": "module.exports = { version: \"1.0.0\" };"
+              }
+            ]
+          },
+          "metadata": {
+            "priority": "medium"
+          }
+        }
+      },
+      "dependencies": {
+        "setup": [
+          "research"
+        ],
+        "implement": [
+          "setup"
+        ]
+      },
+      "settings": {
+        "parallelLimit": 2,
+        "autoQA": false,
+        "autoMerge": false
+      }
+    },
+    "context": {
+      "source": "tasks.json",
+      "tasksFile": "test-e2e.json",
+      "project": "e2e-final"
+    },
+    "startedAt": "2025-07-21T00:57:44.583Z",
+    "lastUpdated": "2025-07-21T00:57:44.583Z"
+  },
+  "tasks": {
+    "research": {
+      "status": "completed",
+      "agentId": "researcher-1753059464584",
+      "startedAt": "2025-07-21T00:57:44.591Z",
+      "lastUpdated": "2025-07-21T00:57:45.866Z",
+      "result": {
+        "status": "completed",
+        "implementation": {
+          "filesCreated": [
+            "README-MCP.md"
+          ],
+          "researchUsed": true
+        },
+        "research": {
+          "toolsUsed": [
+            "web_search",
+            "github_search"
+          ],
+          "resourcesFound": {
+            "bestPractices": 3,
+            "githubExamples": 5
+          }
+        }
+      },
+      "completedAt": "2025-07-21T00:57:45.866Z"
+    },
+    "setup": {
+      "status": "running",
+      "agentId": "setup-agent-1753059465866",
+      "startedAt": "2025-07-21T00:57:45.866Z",
+      "lastUpdated": "2025-07-21T00:57:45.866Z"
+    }
+  }
+}

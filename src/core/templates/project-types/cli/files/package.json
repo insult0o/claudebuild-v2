@@ -1,0 +1,32 @@
+{
+  "name": "{{kebabCase(projectName)}}",
+  "version": "0.1.0",
+  "description": "{{description}}",
+  "main": "src/index.js",
+  "bin": {
+    "{{kebabCase(projectName)}}": "./bin/cli.js"
+  },
+  "scripts": {
+    "start": "node bin/cli.js",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "lint": "eslint src",
+    "lint:fix": "eslint src --fix"
+  },
+  "keywords": ["cli", "{{projectName}}"],
+  "author": "{{author}}",
+  "license": "{{license}}",
+  "dependencies": {
+    "commander": "^11.0.0",
+    "chalk": "^4.1.2",
+    "ora": "^5.4.1",
+    "inquirer": "^8.2.5"
+  },
+  "devDependencies": {
+    "jest": "^29.5.0",
+    "eslint": "^8.42.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

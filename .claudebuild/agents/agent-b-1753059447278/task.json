@@ -1,0 +1,20 @@
+{
+  "id": "task-b",
+  "type": "builder",
+  "agent": "agent-b",
+  "description": "Second task",
+  "input": {
+    "project": "multi",
+    "files": [
+      {
+        "path": "file-b.txt",
+        "content": "From agent B"
+      }
+    ]
+  },
+  "metadata": {
+    "priority": "high"
+  },
+  "status": "ready",
+  "retries": 0
+}

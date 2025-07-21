@@ -1,0 +1,39 @@
+{
+  "name": "Library/Package",
+  "description": "A reusable library or package",
+  "directories": [
+    "src",
+    "tests",
+    "docs",
+    "examples"
+  ],
+  "files": [
+    {
+      "path": "README.md",
+      "content": "# {{projectName}}\n\n{{description}}\n\n## Installation\n\n```bash\nnpm install {{kebabCase(projectName)}}\n```\n\n## Usage\n\n```javascript\nconst {{camelCase(projectName)}} = require('{{kebabCase(projectName)}}');\n\n// Example usage\n```\n\n## API\n\n### function()\n\nDescription of the function.\n\n## License\n\n{{license}}"
+    },
+    {
+      "path": ".gitignore",
+      "content": "node_modules/\ndist/\ncoverage/\n.env\n*.log\n.DS_Store"
+    },
+    {
+      "path": "package.json",
+      "content": "{\n  \"name\": \"{{kebabCase(projectName)}}\",\n  \"version\": \"0.1.0\",\n  \"description\": \"{{description}}\",\n  \"main\": \"src/index.js\",\n  \"scripts\": {\n    \"test\": \"jest\",\n    \"test:watch\": \"jest --watch\",\n    \"test:coverage\": \"jest --coverage\"\n  },\n  \"keywords\": [\"{{projectName}}\"],\n  \"author\": \"{{author}}\",\n  \"license\": \"{{license}}\",\n  \"devDependencies\": {\n    \"jest\": \"^29.5.0\"\n  }\n}"
+    },
+    {
+      "path": "src/index.js",
+      "content": "/**\n * {{projectName}}\n * {{description}}\n */\n\n/**\n * Main export\n */\nmodule.exports = {\n  // Add your exports here\n  version: '0.1.0'\n};"
+    },
+    {
+      "path": "tests/index.test.js",
+      "content": "const {{camelCase(projectName)}} = require('../src');\n\ndescribe('{{projectName}}', () => {\n  it('should export version', () => {\n    expect({{camelCase(projectName)}}.version).toBe('0.1.0');\n  });\n\n  // Add more tests here\n});"
+    }
+  ],
+  "postGenerate": [
+    {
+      "type": "npm",
+      "action": "install",
+      "message": "Installing dependencies..."
+    }
+  ]
+}

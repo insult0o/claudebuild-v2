@@ -1,0 +1,32 @@
+{
+  "name": "{{kebabCase(projectName)}}-backend",
+  "version": "0.1.0",
+  "description": "Backend API for {{projectName}}",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "lint": "eslint src",
+    "lint:fix": "eslint src --fix"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "helmet": "^7.0.0",
+    "morgan": "^1.10.0",
+    "dotenv": "^16.0.3",
+    "express-validator": "^7.0.1",
+    "compression": "^1.7.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1",
+    "jest": "^29.5.0",
+    "supertest": "^6.3.3",
+    "eslint": "^8.42.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

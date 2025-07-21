@@ -1,0 +1,101 @@
+{
+  "workflow": {
+    "status": "running",
+    "definition": {
+      "name": "real-world-test",
+      "description": "Generated from tasks.json",
+      "tasks": {
+        "setup-001": {
+          "id": "setup-001",
+          "type": "builder",
+          "agent": "setup-agent",
+          "description": "Create project structure",
+          "input": {
+            "project": "real-test",
+            "files": [
+              {
+                "path": "package.json",
+                "content": "{\n  \"name\": \"real-world-test\",\n  \"version\": \"1.0.0\",\n  \"main\": \"index.js\"\n}"
+              },
+              {
+                "path": "README.md",
+                "content": "# Real World Test\n\nA test project built with ClaudeBuild"
+              }
+            ]
+          },
+          "metadata": {
+            "priority": "high"
+          }
+        },
+        "code-001": {
+          "id": "code-001",
+          "type": "builder",
+          "agent": "code-agent",
+          "description": "Create application code",
+          "input": {
+            "project": "real-test",
+            "files": [
+              {
+                "path": "index.js",
+                "content": "console.log(\"Hello from Real World Test!\");"
+              },
+              {
+                "path": "lib/utils.js",
+                "content": "module.exports = {\n  greet: (name) => `Hello, ${name}!`\n};"
+              }
+            ]
+          },
+          "metadata": {
+            "priority": "medium"
+          }
+        },
+        "test-001": {
+          "id": "test-001",
+          "type": "builder",
+          "agent": "test-agent",
+          "description": "Create test files",
+          "input": {
+            "project": "real-test",
+            "files": [
+              {
+                "path": "test/utils.test.js",
+                "content": "const utils = require('../lib/utils');\nconsole.assert(utils.greet('World') === 'Hello, World!');\nconsole.log('Tests passed!');"
+              }
+            ]
+          },
+          "metadata": {
+            "priority": "low"
+          }
+        }
+      },
+      "dependencies": {
+        "code-001": [
+          "setup-001"
+        ],
+        "test-001": [
+          "code-001"
+        ]
+      },
+      "settings": {
+        "parallelLimit": 2,
+        "autoQA": false,
+        "autoMerge": false
+      }
+    },
+    "context": {
+      "source": "tasks.json",
+      "tasksFile": "real-world-test.json",
+      "project": "real-world-test"
+    },
+    "startedAt": "2025-07-21T00:54:33.732Z",
+    "lastUpdated": "2025-07-21T00:54:33.732Z"
+  },
+  "tasks": {
+    "setup-001": {
+      "status": "running",
+      "agentId": "setup-agent-1753059273733",
+      "startedAt": "2025-07-21T00:54:33.740Z",
+      "lastUpdated": "2025-07-21T00:54:33.740Z"
+    }
+  }
+}

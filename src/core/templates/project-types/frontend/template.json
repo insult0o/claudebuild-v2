@@ -1,0 +1,56 @@
+{
+  "name": "Frontend Application",
+  "description": "A modern frontend web application",
+  "directories": [
+    "src/components",
+    "src/pages",
+    "src/services",
+    "src/utils",
+    "src/styles",
+    "src/assets",
+    "public",
+    "tests"
+  ],
+  "files": [
+    {
+      "path": "README.md",
+      "template": "README.md"
+    },
+    {
+      "path": ".gitignore",
+      "template": "gitignore"
+    },
+    {
+      "path": "package.json",
+      "template": "package.json"
+    },
+    {
+      "path": "src/index.js",
+      "template": "index.js"
+    },
+    {
+      "path": "src/App.js",
+      "template": "App.js"
+    },
+    {
+      "path": "src/index.css",
+      "template": "index.css"
+    },
+    {
+      "path": "public/index.html",
+      "template": "index.html"
+    }
+  ],
+  "postGenerate": [
+    {
+      "type": "npm",
+      "action": "install",
+      "message": "Installing dependencies..."
+    },
+    {
+      "type": "git",
+      "action": "init",
+      "message": "Initializing git repository..."
+    }
+  ]
+}

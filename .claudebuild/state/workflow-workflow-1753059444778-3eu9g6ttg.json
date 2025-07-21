@@ -1,0 +1,50 @@
+{
+  "workflow": {
+    "status": "running",
+    "definition": {
+      "name": "test-simple-build",
+      "description": "Generated from tasks.json",
+      "tasks": {
+        "build-test-001": {
+          "id": "build-test-001",
+          "type": "builder",
+          "agent": "test-builder",
+          "description": "Create test file",
+          "input": {
+            "project": "test",
+            "files": [
+              {
+                "path": "test-output.txt",
+                "content": "Build system works!"
+              }
+            ]
+          },
+          "metadata": {
+            "priority": "high"
+          }
+        }
+      },
+      "dependencies": {},
+      "settings": {
+        "parallelLimit": 1,
+        "autoQA": false,
+        "autoMerge": false
+      }
+    },
+    "context": {
+      "source": "tasks.json",
+      "tasksFile": "test-build.json",
+      "project": "test-simple-build"
+    },
+    "startedAt": "2025-07-21T00:57:24.778Z",
+    "lastUpdated": "2025-07-21T00:57:24.778Z"
+  },
+  "tasks": {
+    "build-test-001": {
+      "status": "running",
+      "agentId": "test-builder-1753059444779",
+      "startedAt": "2025-07-21T00:57:24.785Z",
+      "lastUpdated": "2025-07-21T00:57:24.786Z"
+    }
+  }
+}

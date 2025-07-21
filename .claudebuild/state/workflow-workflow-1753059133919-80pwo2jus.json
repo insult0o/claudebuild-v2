@@ -1,0 +1,50 @@
+{
+  "workflow": {
+    "status": "running",
+    "definition": {
+      "name": "test-build",
+      "description": "Generated from tasks.json",
+      "tasks": {
+        "test-001": {
+          "id": "test-001",
+          "type": "builder",
+          "agent": "test-agent",
+          "description": "Create a test file",
+          "input": {
+            "project": "test",
+            "files": [
+              {
+                "path": "test.txt",
+                "content": "Hello from ClaudeBuild!"
+              }
+            ]
+          },
+          "metadata": {
+            "priority": "high"
+          }
+        }
+      },
+      "dependencies": {},
+      "settings": {
+        "parallelLimit": 1,
+        "autoQA": false,
+        "autoMerge": false
+      }
+    },
+    "context": {
+      "source": "tasks.json",
+      "tasksFile": "test-build-tasks.json",
+      "project": "test-build"
+    },
+    "startedAt": "2025-07-21T00:52:13.920Z",
+    "lastUpdated": "2025-07-21T00:52:13.920Z"
+  },
+  "tasks": {
+    "test-001": {
+      "status": "running",
+      "agentId": "test-agent-1753059133920",
+      "startedAt": "2025-07-21T00:52:13.927Z",
+      "lastUpdated": "2025-07-21T00:52:13.927Z"
+    }
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "workflow": {
+    "status": "completed",
+    "definition": {
+      "name": "test-mcp",
+      "description": "Generated from tasks.json",
+      "tasks": {
+        "mcp-test": {
+          "id": "mcp-test",
+          "type": "builder-mcp",
+          "agent": "mcp-agent",
+          "description": "Use MCP tools",
+          "input": {
+            "task": "Search for Node.js tutorials",
+            "requirements": [
+              "Use web search"
+            ]
+          },
+          "metadata": {
+            "priority": "high"
+          }
+        }
+      },
+      "dependencies": {},
+      "settings": {
+        "parallelLimit": 1,
+        "autoQA": false,
+        "autoMerge": false
+      }
+    },
+    "context": {
+      "source": "tasks.json",
+      "tasksFile": "test-mcp.json",
+      "project": "test-mcp"
+    },
+    "startedAt": "2025-07-21T00:57:32.961Z",
+    "lastUpdated": "2025-07-21T00:57:34.577Z",
+    "results": {
+      "completed": [
+        "mcp-test"
+      ],
+      "failed": [],
+      "skipped": [],
+      "outputs": {
+        "mcp-test": {
+          "status": "completed",
+          "implementation": {
+            "filesCreated": [
+              "README-MCP.md"
+            ],
+            "researchUsed": true
+          },
+          "research": {
+            "toolsUsed": [
+              "web_search",
+              "github_search"
+            ],
+            "resourcesFound": {
+              "bestPractices": 3,
+              "githubExamples": 5
+            }
+          }
+        }
+      }
+    },
+    "completedAt": "2025-07-21T00:57:34.576Z"
+  },
+  "tasks": {
+    "mcp-test": {
+      "status": "completed",
+      "agentId": "mcp-agent-1753059452962",
+      "startedAt": "2025-07-21T00:57:32.969Z",
+      "lastUpdated": "2025-07-21T00:57:34.573Z",
+      "result": {
+        "status": "completed",
+        "implementation": {
+          "filesCreated": [
+            "README-MCP.md"
+          ],
+          "researchUsed": true
+        },
+        "research": {
+          "toolsUsed": [
+            "web_search",
+            "github_search"
+          ],
+          "resourcesFound": {
+            "bestPractices": 3,
+            "githubExamples": 5
+          }
+        }
+      },
+      "completedAt": "2025-07-21T00:57:34.573Z"
+    }
+  }
+}

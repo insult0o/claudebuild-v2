@@ -1,0 +1,50 @@
+{
+  "workflow": {
+    "status": "running",
+    "definition": {
+      "name": "simple-test",
+      "description": "Generated from tasks.json",
+      "tasks": {
+        "simple-001": {
+          "id": "simple-001",
+          "type": "builder",
+          "agent": "simple-agent",
+          "description": "Create hello world file",
+          "input": {
+            "project": "simple",
+            "files": [
+              {
+                "path": "hello.txt",
+                "content": "Hello World from ClaudeBuild!"
+              }
+            ]
+          },
+          "metadata": {
+            "priority": "high"
+          }
+        }
+      },
+      "dependencies": {},
+      "settings": {
+        "parallelLimit": 1,
+        "autoQA": false,
+        "autoMerge": false
+      }
+    },
+    "context": {
+      "source": "tasks.json",
+      "tasksFile": "simple-test.json",
+      "project": "simple-test"
+    },
+    "startedAt": "2025-07-21T00:54:18.842Z",
+    "lastUpdated": "2025-07-21T00:54:18.842Z"
+  },
+  "tasks": {
+    "simple-001": {
+      "status": "running",
+      "agentId": "simple-agent-1753059258842",
+      "startedAt": "2025-07-21T00:54:18.849Z",
+      "lastUpdated": "2025-07-21T00:54:18.849Z"
+    }
+  }
+}

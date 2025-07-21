@@ -1,0 +1,95 @@
+{
+  "workflow": {
+    "status": "running",
+    "definition": {
+      "name": "claudebuild-mcp-integration",
+      "description": "Generated from tasks.json",
+      "tasks": {
+        "mcp-001": {
+          "id": "mcp-001",
+          "type": "builder",
+          "agent": "mcp-builder-01",
+          "description": "Implement MCP client in agent runtime",
+          "input": {
+            "context": {}
+          },
+          "metadata": {
+            "priority": "high",
+            "estimated_time": "3h"
+          }
+        },
+        "mcp-002": {
+          "id": "mcp-002",
+          "type": "builder",
+          "agent": "mcp-builder-02",
+          "description": "Implement tool access policy system",
+          "input": {
+            "context": {}
+          },
+          "metadata": {
+            "priority": "high",
+            "estimated_time": "2h"
+          }
+        },
+        "mcp-003": {
+          "id": "mcp-003",
+          "type": "builder",
+          "agent": "mcp-builder-03",
+          "description": "Add MCP tools to agent context",
+          "input": {
+            "context": {}
+          },
+          "metadata": {
+            "priority": "high",
+            "estimated_time": "2h"
+          }
+        },
+        "mcp-004": {
+          "id": "mcp-004",
+          "type": "builder",
+          "agent": "mcp-builder-04",
+          "description": "Implement tool usage logging",
+          "input": {
+            "context": {}
+          },
+          "metadata": {
+            "priority": "medium",
+            "estimated_time": "2h"
+          }
+        }
+      },
+      "dependencies": {
+        "mcp-002": [
+          "mcp-001"
+        ],
+        "mcp-003": [
+          "mcp-001",
+          "mcp-002"
+        ],
+        "mcp-004": [
+          "mcp-001"
+        ]
+      },
+      "settings": {
+        "parallelLimit": 3,
+        "autoQA": true,
+        "autoMerge": false
+      }
+    },
+    "context": {
+      "source": "tasks.json",
+      "tasksFile": "mcp-integration-tasks.json",
+      "project": "claudebuild-mcp-integration"
+    },
+    "startedAt": "2025-07-20T03:19:47.574Z",
+    "lastUpdated": "2025-07-20T03:19:47.575Z"
+  },
+  "tasks": {
+    "mcp-001": {
+      "status": "running",
+      "agentId": "mcp-builder-01-1752981587575",
+      "startedAt": "2025-07-20T03:19:47.582Z",
+      "lastUpdated": "2025-07-20T03:19:47.582Z"
+    }
+  }
+}

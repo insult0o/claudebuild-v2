@@ -1,0 +1,91 @@
+{
+  "name": "Full-Stack Application",
+  "description": "A complete full-stack application with frontend and backend",
+  "directories": [
+    "frontend/src/components",
+    "frontend/src/pages",
+    "frontend/src/services",
+    "frontend/src/utils",
+    "frontend/public",
+    "backend/src/controllers",
+    "backend/src/models",
+    "backend/src/routes",
+    "backend/src/services",
+    "backend/src/middleware",
+    "backend/src/utils",
+    "backend/tests/unit",
+    "backend/tests/integration",
+    "shared/types",
+    "shared/constants",
+    "docs"
+  ],
+  "files": [
+    {
+      "path": "README.md",
+      "template": "README.md"
+    },
+    {
+      "path": ".gitignore",
+      "template": "gitignore"
+    },
+    {
+      "path": "docker-compose.yml",
+      "template": "docker-compose.yml"
+    },
+    {
+      "path": "frontend/package.json",
+      "template": "frontend-package.json"
+    },
+    {
+      "path": "frontend/src/App.js",
+      "template": "App.js"
+    },
+    {
+      "path": "frontend/src/index.js",
+      "template": "frontend-index.js"
+    },
+    {
+      "path": "frontend/README.md",
+      "template": "frontend-README.md"
+    },
+    {
+      "path": "backend/package.json",
+      "template": "backend-package.json"
+    },
+    {
+      "path": "backend/src/index.js",
+      "template": "backend-index.js"
+    },
+    {
+      "path": "backend/src/app.js",
+      "template": "app.js"
+    },
+    {
+      "path": "backend/.env.example",
+      "template": "env.example"
+    },
+    {
+      "path": "backend/README.md",
+      "template": "backend-README.md"
+    }
+  ],
+  "postGenerate": [
+    {
+      "type": "npm",
+      "action": "install",
+      "cwd": "frontend",
+      "message": "Installing frontend dependencies..."
+    },
+    {
+      "type": "npm",
+      "action": "install",
+      "cwd": "backend",
+      "message": "Installing backend dependencies..."
+    },
+    {
+      "type": "git",
+      "action": "init",
+      "message": "Initializing git repository..."
+    }
+  ]
+}

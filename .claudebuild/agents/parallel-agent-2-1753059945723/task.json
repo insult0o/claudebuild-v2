@@ -1,0 +1,20 @@
+{
+  "id": "parallel-2",
+  "type": "builder",
+  "agent": "parallel-agent-2",
+  "description": "Parallel task 2",
+  "input": {
+    "project": "parallel",
+    "files": [
+      {
+        "path": "output-2.txt",
+        "content": "Output from parallel task 2"
+      }
+    ]
+  },
+  "metadata": {
+    "priority": "medium"
+  },
+  "status": "ready",
+  "retries": 0
+}

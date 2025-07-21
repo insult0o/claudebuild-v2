@@ -1,0 +1,74 @@
+{
+  "workflow": {
+    "status": "running",
+    "definition": {
+      "name": "test-multi",
+      "description": "Generated from tasks.json",
+      "tasks": {
+        "task-a": {
+          "id": "task-a",
+          "type": "builder",
+          "agent": "agent-a",
+          "description": "First task",
+          "input": {
+            "project": "multi",
+            "files": [
+              {
+                "path": "file-a.txt",
+                "content": "From agent A"
+              }
+            ]
+          },
+          "metadata": {
+            "priority": "high"
+          }
+        },
+        "task-b": {
+          "id": "task-b",
+          "type": "builder",
+          "agent": "agent-b",
+          "description": "Second task",
+          "input": {
+            "project": "multi",
+            "files": [
+              {
+                "path": "file-b.txt",
+                "content": "From agent B"
+              }
+            ]
+          },
+          "metadata": {
+            "priority": "high"
+          }
+        }
+      },
+      "dependencies": {},
+      "settings": {
+        "parallelLimit": 2,
+        "autoQA": false,
+        "autoMerge": false
+      }
+    },
+    "context": {
+      "source": "tasks.json",
+      "tasksFile": "test-multi.json",
+      "project": "test-multi"
+    },
+    "startedAt": "2025-07-21T00:57:27.278Z",
+    "lastUpdated": "2025-07-21T00:57:27.278Z"
+  },
+  "tasks": {
+    "task-a": {
+      "status": "running",
+      "agentId": "agent-a-1753059447278",
+      "startedAt": "2025-07-21T00:57:27.285Z",
+      "lastUpdated": "2025-07-21T00:57:27.285Z"
+    },
+    "task-b": {
+      "status": "running",
+      "agentId": "agent-b-1753059447278",
+      "startedAt": "2025-07-21T00:57:27.285Z",
+      "lastUpdated": "2025-07-21T00:57:27.285Z"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "research",
+  "type": "builder-mcp",
+  "agent": "researcher",
+  "description": "Research JavaScript testing frameworks",
+  "input": {
+    "task": "Find information about Jest, Mocha, and Vitest",
+    "requirements": [
+      "Use web search to find comparisons",
+      "Create a summary of findings"
+    ]
+  },
+  "metadata": {
+    "priority": "high"
+  },
+  "status": "ready",
+  "retries": 0
+}

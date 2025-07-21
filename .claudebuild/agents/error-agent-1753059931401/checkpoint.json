@@ -1,0 +1,1 @@
+{"task":{"id":"error-task","type":"builder","agent":"error-agent","description":"Task that will have an error","input":{"project":"error","files":[{"path":"../../../etc/passwd","content":"Should not write here"}]},"metadata":{"priority":"high"},"status":"ready","retries":0},"timestamp":1753059933444}

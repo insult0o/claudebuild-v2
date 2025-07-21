@@ -1,0 +1,50 @@
+{
+  "workflow": {
+    "status": "running",
+    "definition": {
+      "name": "error-test",
+      "description": "Generated from tasks.json",
+      "tasks": {
+        "error-task": {
+          "id": "error-task",
+          "type": "builder",
+          "agent": "error-agent",
+          "description": "Task that will have an error",
+          "input": {
+            "project": "error",
+            "files": [
+              {
+                "path": "../../../etc/passwd",
+                "content": "Should not write here"
+              }
+            ]
+          },
+          "metadata": {
+            "priority": "high"
+          }
+        }
+      },
+      "dependencies": {},
+      "settings": {
+        "parallelLimit": 1,
+        "autoQA": false,
+        "autoMerge": false
+      }
+    },
+    "context": {
+      "source": "tasks.json",
+      "tasksFile": "error-test.json",
+      "project": "error-test"
+    },
+    "startedAt": "2025-07-21T01:05:31.401Z",
+    "lastUpdated": "2025-07-21T01:05:31.401Z"
+  },
+  "tasks": {
+    "error-task": {
+      "status": "running",
+      "agentId": "error-agent-1753059931401",
+      "startedAt": "2025-07-21T01:05:31.408Z",
+      "lastUpdated": "2025-07-21T01:05:31.408Z"
+    }
+  }
+}

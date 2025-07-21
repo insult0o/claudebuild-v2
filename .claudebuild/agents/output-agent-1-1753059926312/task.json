@@ -1,0 +1,20 @@
+{
+  "id": "output-task-1",
+  "type": "builder",
+  "agent": "output-agent-1",
+  "description": "First task with clear output",
+  "input": {
+    "project": "output-test",
+    "files": [
+      {
+        "path": "output1.txt",
+        "content": "Task 1 output"
+      }
+    ]
+  },
+  "metadata": {
+    "priority": "high"
+  },
+  "status": "ready",
+  "retries": 0
+}

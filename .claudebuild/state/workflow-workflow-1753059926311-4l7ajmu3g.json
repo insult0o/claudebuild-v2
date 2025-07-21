@@ -1,0 +1,96 @@
+{
+  "workflow": {
+    "status": "running",
+    "definition": {
+      "name": "output-test",
+      "description": "Generated from tasks.json",
+      "tasks": {
+        "output-task-1": {
+          "id": "output-task-1",
+          "type": "builder",
+          "agent": "output-agent-1",
+          "description": "First task with clear output",
+          "input": {
+            "project": "output-test",
+            "files": [
+              {
+                "path": "output1.txt",
+                "content": "Task 1 output"
+              }
+            ]
+          },
+          "metadata": {
+            "priority": "high"
+          }
+        },
+        "output-task-2": {
+          "id": "output-task-2",
+          "type": "builder",
+          "agent": "output-agent-2",
+          "description": "Second task depends on first",
+          "input": {
+            "project": "output-test",
+            "files": [
+              {
+                "path": "output2.txt",
+                "content": "Task 2 output (after task 1)"
+              }
+            ]
+          },
+          "metadata": {
+            "priority": "medium"
+          }
+        },
+        "output-task-3": {
+          "id": "output-task-3",
+          "type": "builder",
+          "agent": "output-agent-3",
+          "description": "Third task runs parallel",
+          "input": {
+            "project": "output-test",
+            "files": [
+              {
+                "path": "output3.txt",
+                "content": "Task 3 output (parallel)"
+              }
+            ]
+          },
+          "metadata": {
+            "priority": "medium"
+          }
+        }
+      },
+      "dependencies": {
+        "output-task-2": [
+          "output-task-1"
+        ]
+      },
+      "settings": {
+        "parallelLimit": 2,
+        "autoQA": false,
+        "autoMerge": false
+      }
+    },
+    "context": {
+      "source": "tasks.json",
+      "tasksFile": "output-test.json",
+      "project": "output-test"
+    },
+    "startedAt": "2025-07-21T01:05:26.312Z",
+    "lastUpdated": "2025-07-21T01:05:26.312Z"
+  },
+  "tasks": {
+    "output-task-1": {
+      "status": "running",
+      "agentId": "output-agent-1-1753059926312",
+      "startedAt": "2025-07-21T01:05:26.320Z",
+      "lastUpdated": "2025-07-21T01:05:26.320Z"
+    },
+    "output-task-3": {
+      "status": "running",
+      "agentId": "output-agent-3-1753059926313",
+      "startedAt": "2025-07-21T01:05:26.320Z",
+      "lastUpdated": "2025-07-21T01:05:26.320Z"
+    }
+  }
+}

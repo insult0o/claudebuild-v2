@@ -1,0 +1,75 @@
+{
+  "workflow": {
+    "status": "running",
+    "definition": {
+      "name": "mixed-test",
+      "description": "Generated from tasks.json",
+      "tasks": {
+        "success-task": {
+          "id": "success-task",
+          "type": "builder",
+          "agent": "success-agent",
+          "description": "Successful task",
+          "input": {
+            "project": "mixed",
+            "files": [
+              {
+                "path": "success.txt",
+                "content": "This will succeed"
+              }
+            ]
+          },
+          "metadata": {
+            "priority": "high"
+          }
+        },
+        "warning-task": {
+          "id": "warning-task",
+          "type": "builder",
+          "agent": "warning-agent",
+          "description": "Task with warnings",
+          "input": {
+            "project": "mixed",
+            "files": [
+              {
+                "path": "warning.txt",
+                "content": "This may have warnings"
+              }
+            ],
+            "validateStrict": false
+          },
+          "metadata": {
+            "priority": "medium"
+          }
+        }
+      },
+      "dependencies": {},
+      "settings": {
+        "parallelLimit": 2,
+        "autoQA": false,
+        "autoMerge": false
+      }
+    },
+    "context": {
+      "source": "tasks.json",
+      "tasksFile": "mixed-test.json",
+      "project": "mixed-test"
+    },
+    "startedAt": "2025-07-21T01:05:33.938Z",
+    "lastUpdated": "2025-07-21T01:05:33.938Z"
+  },
+  "tasks": {
+    "success-task": {
+      "status": "running",
+      "agentId": "success-agent-1753059933939",
+      "startedAt": "2025-07-21T01:05:33.946Z",
+      "lastUpdated": "2025-07-21T01:05:33.946Z"
+    },
+    "warning-task": {
+      "status": "running",
+      "agentId": "warning-agent-1753059933939",
+      "startedAt": "2025-07-21T01:05:33.946Z",
+      "lastUpdated": "2025-07-21T01:05:33.946Z"
+    }
+  }
+}

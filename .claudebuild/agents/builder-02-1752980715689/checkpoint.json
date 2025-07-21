@@ -1,0 +1,1 @@
+{"task":{"id":"task-002","type":"builder","agent":"builder-02","description":"Implement core API","input":{"story":"story-002.md","context":{"architecture":"architecture.md","prd":"PRD.md"}},"metadata":{"priority":"high","estimated_time":"4h"},"status":"ready","retries":0},"timestamp":1752980715731}

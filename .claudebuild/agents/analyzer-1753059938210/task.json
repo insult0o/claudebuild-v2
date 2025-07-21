@@ -1,0 +1,20 @@
+{
+  "id": "analyze",
+  "type": "builder",
+  "agent": "analyzer",
+  "description": "Analyze research results",
+  "input": {
+    "project": "e2e-complete",
+    "files": [
+      {
+        "path": "analysis/summary.md",
+        "content": "# Testing Framework Analysis\n\nBased on research findings..."
+      }
+    ]
+  },
+  "metadata": {
+    "priority": "high"
+  },
+  "status": "ready",
+  "retries": 0
+}

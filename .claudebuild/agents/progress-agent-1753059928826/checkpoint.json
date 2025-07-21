@@ -1,0 +1,1 @@
+{"task":{"id":"progress-task","type":"builder","agent":"progress-agent","description":"Task with progress tracking","input":{"project":"progress","files":[{"path":"progress.txt","content":"Progress tracking test"}]},"metadata":{"priority":"high"},"status":"ready","retries":0},"timestamp":1753059930873}

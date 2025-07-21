@@ -1,0 +1,1 @@
+{"task":{"id":"research","type":"builder-mcp","agent":"researcher","description":"Research best practices","input":{"task":"Find Node.js project structure best practices","requirements":["Use web search","Create summary"]},"metadata":{"priority":"high"},"status":"ready","retries":0},"timestamp":1753059465867}

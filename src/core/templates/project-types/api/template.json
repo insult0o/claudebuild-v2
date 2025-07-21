@@ -1,0 +1,39 @@
+{
+  "name": "REST API",
+  "description": "A RESTful API service",
+  "directories": [
+    "src/routes",
+    "src/controllers",
+    "src/models",
+    "src/middleware",
+    "src/validators",
+    "src/utils",
+    "tests",
+    "docs"
+  ],
+  "files": [
+    {
+      "path": "README.md",
+      "content": "# {{projectName}} API\n\n{{description}}\n\n## Endpoints\n\n- `GET /health` - Health check\n- `GET /api` - API info\n\n## Getting Started\n\n```bash\nnpm install\nnpm run dev\n```"
+    },
+    {
+      "path": ".gitignore",
+      "template": "../backend/files/gitignore"
+    },
+    {
+      "path": "package.json",
+      "content": "{\n  \"name\": \"{{kebabCase(projectName)}}-api\",\n  \"version\": \"0.1.0\",\n  \"description\": \"{{description}}\",\n  \"main\": \"src/index.js\",\n  \"scripts\": {\n    \"start\": \"node src/index.js\",\n    \"dev\": \"nodemon src/index.js\"\n  },\n  \"dependencies\": {\n    \"express\": \"^4.18.2\",\n    \"cors\": \"^2.8.5\",\n    \"helmet\": \"^7.0.0\"\n  },\n  \"devDependencies\": {\n    \"nodemon\": \"^3.0.1\"\n  }\n}"
+    },
+    {
+      "path": "src/index.js",
+      "content": "const express = require('express');\nconst cors = require('cors');\nconst helmet = require('helmet');\n\nconst app = express();\nconst PORT = process.env.PORT || 3000;\n\napp.use(helmet());\napp.use(cors());\napp.use(express.json());\n\napp.get('/health', (req, res) => {\n  res.json({ status: 'ok' });\n});\n\napp.get('/api', (req, res) => {\n  res.json({ \n    name: '{{projectName}} API',\n    version: '0.1.0'\n  });\n});\n\napp.listen(PORT, () => {\n  console.log(`API running on port ${PORT}`);\n});"
+    }
+  ],
+  "postGenerate": [
+    {
+      "type": "npm",
+      "action": "install",
+      "message": "Installing dependencies..."
+    }
+  ]
+}

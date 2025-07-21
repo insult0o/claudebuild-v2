@@ -1,0 +1,7 @@
+node_modules/
+.env
+.claudebuild/logs/
+.claudebuild/checkpoints/
+dist/
+*.log
+.DS_Store

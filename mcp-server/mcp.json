@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "claudebuild": {
+      "command": "node",
+      "args": ["mcp-server/index.js"],
+      "cwd": "/home/insulto/claudebuild",
+      "env": {
+        "NODE_ENV": "production"
+      }
+    }
+  }
+}

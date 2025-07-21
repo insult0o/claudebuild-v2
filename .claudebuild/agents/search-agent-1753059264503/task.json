@@ -1,0 +1,18 @@
+{
+  "id": "search-001",
+  "type": "builder-mcp",
+  "agent": "search-agent",
+  "description": "Test web search",
+  "input": {
+    "task": "Search for JavaScript tutorials",
+    "requirements": [
+      "Use web search tool",
+      "Create summary of findings"
+    ]
+  },
+  "metadata": {
+    "priority": "high"
+  },
+  "status": "ready",
+  "retries": 0
+}

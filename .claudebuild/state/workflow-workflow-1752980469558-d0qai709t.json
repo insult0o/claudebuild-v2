@@ -1,0 +1,153 @@
+{
+  "workflow": {
+    "status": "completed",
+    "definition": {
+      "name": "claudebuild",
+      "description": "Generated from tasks.json",
+      "tasks": {
+        "task-001": {
+          "id": "task-001",
+          "type": "builder",
+          "agent": "builder-01",
+          "description": "Setup project foundation",
+          "input": {
+            "story": "story-001.md",
+            "context": {
+              "architecture": "architecture.md",
+              "prd": "PRD.md"
+            }
+          },
+          "metadata": {
+            "priority": "high",
+            "estimated_time": "2h"
+          }
+        },
+        "task-002": {
+          "id": "task-002",
+          "type": "builder",
+          "agent": "builder-02",
+          "description": "Implement core API",
+          "input": {
+            "story": "story-002.md",
+            "context": {
+              "architecture": "architecture.md",
+              "prd": "PRD.md"
+            }
+          },
+          "metadata": {
+            "priority": "high",
+            "estimated_time": "4h"
+          }
+        },
+        "task-003": {
+          "id": "task-003",
+          "type": "builder",
+          "agent": "builder-03",
+          "description": "Create frontend components",
+          "input": {
+            "story": "story-003.md",
+            "context": {
+              "architecture": "architecture.md",
+              "prd": "PRD.md"
+            }
+          },
+          "metadata": {
+            "priority": "medium",
+            "estimated_time": "3h"
+          }
+        }
+      },
+      "dependencies": {
+        "task-002": [
+          "task-001"
+        ],
+        "task-003": [
+          "task-001"
+        ]
+      },
+      "settings": {
+        "parallelLimit": 4,
+        "autoQA": true,
+        "autoMerge": false
+      }
+    },
+    "context": {
+      "source": "tasks.json",
+      "tasksFile": "tasks.json",
+      "project": "claudebuild"
+    },
+    "startedAt": "2025-07-20T03:01:09.558Z",
+    "lastUpdated": "2025-07-20T03:01:20.644Z",
+    "results": {
+      "completed": [
+        "task-001",
+        "task-003",
+        "task-002"
+      ],
+      "failed": [],
+      "skipped": [],
+      "outputs": {
+        "task-001": {
+          "success": true,
+          "message": "Task completed by builder-01 agent",
+          "taskId": "task-001",
+          "timestamp": 1752980475095
+        },
+        "task-003": {
+          "success": true,
+          "message": "Task completed by builder-03 agent",
+          "taskId": "task-003",
+          "timestamp": 1752980480640
+        },
+        "task-002": {
+          "success": true,
+          "message": "Task completed by builder-02 agent",
+          "taskId": "task-002",
+          "timestamp": 1752980480641
+        }
+      }
+    },
+    "completedAt": "2025-07-20T03:01:20.644Z"
+  },
+  "tasks": {
+    "task-001": {
+      "status": "completed",
+      "agentId": "builder-01-1752980469559",
+      "startedAt": "2025-07-20T03:01:09.560Z",
+      "lastUpdated": "2025-07-20T03:01:15.098Z",
+      "result": {
+        "success": true,
+        "message": "Task completed by builder-01 agent",
+        "taskId": "task-001",
+        "timestamp": 1752980475095
+      },
+      "completedAt": "2025-07-20T03:01:15.098Z"
+    },
+    "task-002": {
+      "status": "completed",
+      "agentId": "builder-02-1752980475100",
+      "startedAt": "2025-07-20T03:01:15.100Z",
+      "lastUpdated": "2025-07-20T03:01:20.643Z",
+      "result": {
+        "success": true,
+        "message": "Task completed by builder-02 agent",
+        "taskId": "task-002",
+        "timestamp": 1752980480641
+      },
+      "completedAt": "2025-07-20T03:01:20.643Z"
+    },
+    "task-003": {
+      "status": "completed",
+      "agentId": "builder-03-1752980475100",
+      "startedAt": "2025-07-20T03:01:15.100Z",
+      "lastUpdated": "2025-07-20T03:01:20.641Z",
+      "result": {
+        "success": true,
+        "message": "Task completed by builder-03 agent",
+        "taskId": "task-003",
+        "timestamp": 1752980480640
+      },
+      "completedAt": "2025-07-20T03:01:20.641Z"
+    }
+  }
+}

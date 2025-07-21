@@ -1,0 +1,1 @@
+{"task":{"id":"parallel-6","type":"builder","agent":"parallel-agent-6","description":"Parallel task 6","input":{"project":"parallel","files":[{"path":"output-6.txt","content":"Output from parallel task 6"}]},"metadata":{"priority":"medium"},"status":"ready","retries":0},"timestamp":1753059947772}

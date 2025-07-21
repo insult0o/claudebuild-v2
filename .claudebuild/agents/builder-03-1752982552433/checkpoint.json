@@ -1,0 +1,1 @@
+{"task":{"id":"task-003","type":"builder","agent":"builder-03","description":"Create frontend components","input":{"story":"story-003.md","context":{"architecture":"architecture.md","prd":"PRD.md"}},"metadata":{"priority":"medium","estimated_time":"3h"},"status":"ready","retries":0},"timestamp":1752982552485}
