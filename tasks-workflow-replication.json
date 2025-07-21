@@ -1,0 +1,168 @@
+{
+  "project": "claudebuild-workflow-replication",
+  "created": "2024-07-21T02:35:00Z",
+  "mainIssue": "MAIN_ISSUE_WORKFLOW_REPLICATION.md",
+  "planning_artifacts": {
+    "prd": "PRD_WORKFLOW_REPLICATION.md",
+    "architecture": "ARCHITECTURE_WORKFLOW_REPLICATION.md", 
+    "stories": [
+      "story-001-agent-coordination.md",
+      "story-002-github-workflow.md",
+      "story-003-mcp-integration.md",
+      "story-004-knowledge-capture.md"
+    ]
+  },
+  "tasks": [
+    {
+      "id": "task-001",
+      "type": "architect",
+      "agent": "architect-001",
+      "story": "story-001-agent-coordination.md",
+      "title": "Design Multi-Agent Coordination Patterns",
+      "description": "Create detailed specifications for agent handoffs, communication protocols, and coordination mechanisms",
+      "dependencies": [],
+      "priority": "critical",
+      "estimated_time": "2h",
+      "acceptance_criteria": [
+        "Agent communication protocol documented",
+        "Handoff procedures specified",
+        "Error handling patterns defined",
+        "State management approach clarified"
+      ],
+      "github_actions": [
+        "Create SPEC/agent-coordination.md",
+        "Document communication patterns",
+        "Define coordination protocols"
+      ]
+    },
+    {
+      "id": "task-002", 
+      "type": "architect",
+      "agent": "architect-002",
+      "story": "story-002-github-workflow.md",
+      "title": "Implement GitHub Management Specifications",
+      "description": "Detail the complete GitHub workflow management as per our latest architecture",
+      "dependencies": ["task-001"],
+      "priority": "critical",
+      "estimated_time": "2.5h",
+      "acceptance_criteria": [
+        "Complete GitHub responsibility matrix documented",
+        "Git worktree patterns specified",
+        "Branch and PR workflows detailed",
+        "Integration procedures defined"
+      ],
+      "github_actions": [
+        "Create SPEC/github-workflow.md",
+        "Document responsibility matrix",
+        "Define git operations per agent"
+      ]
+    },
+    {
+      "id": "task-003",
+      "type": "builder",
+      "agent": "builder-mcp-001", 
+      "story": "story-003-mcp-integration.md",
+      "title": "Implement MCP Tool Integration & Research",
+      "description": "Actively use MCP tools for research, validation, and knowledge gathering throughout workflow",
+      "dependencies": ["task-001"],
+      "priority": "high",
+      "estimated_time": "3h",
+      "acceptance_criteria": [
+        "Successfully use web_search for research",
+        "Utilize github_search for code examples",
+        "Implement tool governance patterns",
+        "Document tool usage insights"
+      ],
+      "github_actions": [
+        "Create integration examples",
+        "Document tool usage patterns", 
+        "Share research findings"
+      ]
+    },
+    {
+      "id": "task-004",
+      "type": "builder",
+      "agent": "builder-knowledge-001",
+      "story": "story-004-knowledge-capture.md", 
+      "title": "Implement Knowledge Capture & Learning System",
+      "description": "Create mechanisms to capture, store, and share all learning insights from workflow execution",
+      "dependencies": ["task-003"],
+      "priority": "high",
+      "estimated_time": "2h",
+      "acceptance_criteria": [
+        "Learning capture mechanisms implemented",
+        "Knowledge storage in MCP servers",
+        "Experience documentation automated",
+        "Insight synthesis capabilities"
+      ],
+      "github_actions": [
+        "Create knowledge capture tools",
+        "Implement learning documentation",
+        "Setup insight sharing mechanisms"
+      ]
+    },
+    {
+      "id": "task-005",
+      "type": "qa",
+      "agent": "qa-validation-001",
+      "story": "story-validation.md",
+      "title": "Validate Workflow Execution & Quality",
+      "description": "Review all workflow execution results, validate against success criteria, identify improvements",
+      "dependencies": ["task-002", "task-003", "task-004"],
+      "priority": "medium",
+      "estimated_time": "1.5h", 
+      "acceptance_criteria": [
+        "All agent roles successfully executed",
+        "GitHub workflow validated",
+        "MCP integration confirmed",
+        "Learning objectives achieved"
+      ],
+      "github_actions": [
+        "Create validation reports",
+        "Document quality metrics",
+        "Identify improvement areas"
+      ]
+    },
+    {
+      "id": "task-006",
+      "type": "manager",
+      "agent": "manager-integration-001",
+      "story": "story-integration.md", 
+      "title": "Integration & Knowledge Synthesis",
+      "description": "Integrate all learning, create comprehensive knowledge base, prepare for system evolution",
+      "dependencies": ["task-005"],
+      "priority": "medium",
+      "estimated_time": "1h",
+      "acceptance_criteria": [
+        "All artifacts integrated",
+        "Knowledge base updated",
+        "System improvements identified",
+        "Next steps documented"
+      ],
+      "github_actions": [
+        "Create integration summary",
+        "Update MCP knowledge base",
+        "Document system evolution plan"
+      ]
+    }
+  ],
+  "workflow": {
+    "methodology": "BMAD",
+    "parallel_capable": ["task-003", "task-004"],
+    "sequential_required": ["task-001", "task-002"],
+    "quality_gates": true,
+    "learning_focus": true
+  },
+  "github_strategy": {
+    "repository": "claudebuild-workflow-replication",
+    "branch_pattern": "feature/task-{id}",
+    "pr_strategy": "individual_task_prs",
+    "integration_branch": "main",
+    "worktree_isolation": true
+  },
+  "learning_integration": {
+    "capture_methods": ["execution_logs", "insight_documentation", "experience_synthesis"],
+    "storage_targets": ["MCP_servers", "local_knowledge_base", "shared_documentation"],
+    "sharing_mechanisms": ["real_time_updates", "milestone_summaries", "final_synthesis"]
+  }
+}
