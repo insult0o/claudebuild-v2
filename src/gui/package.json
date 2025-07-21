@@ -1,0 +1,65 @@
+{
+  "name": "claudebuild-gui",
+  "version": "2.1.0",
+  "description": "ClaudeBuild v2.1.0 Superior GUI - Tauri + React Desktop Application",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "tauri:dev": "tauri dev",
+    "tauri:build": "tauri build",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "format": "prettier --write src"
+  },
+  "dependencies": {
+    "@tauri-apps/api": "^1.5.3",
+    "@tauri-apps/plugin-shell": "^1.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "zustand": "^4.4.7",
+    "react-chrono": "^2.6.0",
+    "@nivo/core": "^0.87.0",
+    "@nivo/line": "^0.87.0",
+    "@nivo/network": "^0.87.0",
+    "@tanstack/react-query": "^5.17.0",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/material": "^5.15.0",
+    "@mui/icons-material": "^5.15.0",
+    "react-grid-layout": "^1.4.4",
+    "react-split-pane": "^0.1.92",
+    "ws": "^8.16.0",
+    "lz4": "^0.6.5"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^1.5.8",
+    "@types/react": "^18.2.43",
+    "@types/react-dom": "^18.2.17",
+    "@types/ws": "^8.5.10",
+    "@typescript-eslint/eslint-plugin": "^6.14.0",
+    "@typescript-eslint/parser": "^6.14.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "eslint": "^8.55.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
+    "prettier": "^3.1.1",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.8",
+    "vitest": "^1.1.0"
+  },
+  "competitive_advantages": {
+    "vs_claudia": "Superior MCP tool governance + BMAD workflow visualization",
+    "vs_crystal": "Advanced orchestration monitoring + knowledge graph visualization",
+    "vs_claude_squad": "Rich desktop GUI + methodology integration + learning systems",
+    "unique_features": [
+      "Real-time agent orchestration monitoring",
+      "BMAD workflow phase visualization", 
+      "Research-enhanced development display",
+      "Knowledge graph learning visualization",
+      "Advanced MCP tool governance dashboard"
+    ]
+  }
+}
